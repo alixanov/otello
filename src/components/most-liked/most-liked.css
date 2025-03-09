@@ -1,0 +1,142 @@
+/* Основной контейнер */
+.most-liked__container {
+     width: 100%;
+     margin-bottom: 20px;
+}
+
+/* Заголовок */
+.most-liked__container h1 {
+     font-size: 28px;
+     font-weight: 700;
+     margin-bottom: 20px;
+     color: var(--text-color);
+     margin-top: 10px;
+}
+
+.most-liked__cards {
+     width: 100%;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     flex-wrap: wrap;
+}
+/* Список отелей */
+.most-liked__header {
+width: 350px;
+height: 103px;
+     background:var(--background-color-search);
+     padding: 15px 10Px;
+     border-radius: 12px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+     display: flex;
+     align-items: start;
+     flex-direction: column;
+     gap: 5px;
+
+     
+}
+
+.most-liked__all {
+     font-size: 16px;
+     font-weight: 600;
+     color:var(--text-color);
+}
+
+.most-liked__count {
+     font-size: 16px;
+     color: var(--gray-color);
+}
+
+.most-liked__cards {
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+}
+
+/* Блок города */
+.most-liked__city {
+     width: 350px;
+     background: var(--background-color-search);
+     padding: 10px 10Px;
+     border-radius: 12px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+     display: flex;
+     align-items: start;
+     justify-content: space-between;
+}
+
+.most-liked__city__title {
+     display: flex;
+     justify-content: start;
+     align-items: start;
+     flex-direction: column;
+}
+
+.most-liked__city__title h2 {
+     font-size: 15px;
+     font-weight: 500;
+     margin: 0;
+     color: var(--text-color);
+}
+
+.most-liked__city__count {
+     font-size: 16px;
+     color: var(--gray-color);
+     margin-top: 3px;
+}
+
+
+.most-liked__hotel:hover {
+     transform: scale(1.05);
+}
+
+/* Картинка */
+.most-liked-hotel-image {
+    width: 80px;
+    height: 80px;
+     object-fit: cover;
+     border-radius: 12px;
+}
+
+/* Блок авторизации */
+.most-liked__login__prompt {
+width: 350px;
+     height: 100px;
+     background: var(--background-color-search);
+     padding: 15px 10Px;
+     border-radius: 12px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+     display: flex;
+     align-items: start;
+     flex-direction: column;
+     gap: 1px;
+     margin-top: 20px;
+}
+
+.most-liked__login__prompt p {
+     font-size: 14px;
+     color: var(--text-color);
+     margin-bottom: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+
+.most-liked__login__button {
+     background-color: var(--light-green-color);
+     color: var(--black-color);
+     font-size: 16px;
+     font-weight: 600;
+     padding: 8px 20px;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: .5s ease;
+}
+
+.most-liked__login__button:hover {
+     background: #71ca3a;
+}
+

@@ -1,0 +1,103 @@
+.will__touch__container {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background:var(--background-color-search);
+     border-radius: 12px;
+     position: relative;
+     margin-top: 20px;
+     padding: 10px;
+
+}
+
+.will__touch__content {
+     max-width: 500px;
+}
+
+.will__touch__content>h2 {
+     font-size: 20px;
+     font-weight: bold;
+     margin-bottom: 5px;
+     color: var(--text-color);
+
+}
+
+.will__touch__content>span{
+     font-size: 16px;
+     color: var(--gray-color);
+     margin-bottom: 20px;
+}
+
+.will__touch__form {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+               margin-top: 15px;
+}
+
+.will__touch__form input {
+     flex: 1;
+     padding: 12px;
+     border: 1px solid var(--slider-color);
+     border-radius: 8px;
+     font-size: 16px;
+     background: var(--background-color-search);
+}
+.will__touch__form input::placeholder{
+          color: var(--gray-color);
+}
+.will__touch__form button {
+     background-color: var(--light-green-color) !important;
+          color: var(--black-color);
+     font-size: 16px;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: bold;
+}
+
+.will__touch__form button:hover {
+     background: #6bd234;
+}
+
+.will__touch__agreement {
+     font-size: 12px;
+          color: var(--gray-color);     margin-top: 10px;
+}
+
+.will__touch__agreement a {
+     color: #5a9fe0;
+     text-decoration: none;
+          font-size: 12px;
+
+}
+
+.will__touch__agreement a:hover {
+     text-decoration: underline;
+}
+
+/* Иконки */
+.will__touch__icons {
+     display: flex;
+     gap: 5px;
+}
+
+.icon {
+     width: 200px;
+}
+
+.bell-icon {
+     transform: rotate(-20deg);
+     top: -13px;
+     position: absolute;
+     right: 220px;
+}
+
+.bolt-icon {
+     transform: rotate(-5deg);
+     position: absolute;
+     right: 55px;
+     top: 10px;
+}

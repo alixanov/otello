@@ -1,0 +1,14 @@
+.home__container {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;
+     margin-top: 30px;
+}
+.home__card {
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     gap: 20px;
+}

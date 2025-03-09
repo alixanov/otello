@@ -1,0 +1,171 @@
+.bonuses__container {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+}
+.bonuses__modal {
+     background: var(--background-color-search);
+     width: 400px;
+     max-height: 80vh;
+     /* Ограничиваем высоту модального окна */
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+     /* Скрываем выходящий за пределы контент */
+     display: flex;
+     flex-direction: column;
+}
+
+.bonuses-modal-content {
+     overflow-y: auto;
+     /* Добавляем вертикальный скролл */
+     max-height: calc(80vh - 60px);
+     /* Ограничиваем высоту, чтобы учесть заголовок и кнопку закрытия */
+     padding-right: 10px;
+     /* Отступ для скролла */
+}
+
+/* Стилизация скролла */
+.bonuses-modal-content::-webkit-scrollbar {
+     width: 6px;
+}
+
+.bonuses-modal-content::-webkit-scrollbar-thumb {
+     background-color: #ccc;
+     border-radius: 3px;
+}
+
+.bonuses-modal-content::-webkit-scrollbar-track {
+     background: #f1f1f1;
+}
+.bonuses__close {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background: none;
+     border: none;
+     cursor: pointer;
+     font-size: 20px;
+     color: var(--text-color);
+}
+
+.bonuses__title {
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+
+.bonuses__header {
+     background: linear-gradient(135deg, #dfffc3, #b3f0a1);
+     padding: 15px;
+     border-radius: 8px;
+     text-align: center;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+.bonuses__logo {
+     width: 140px;
+     height: 35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 16px;
+     font-weight: bold;
+     margin-bottom: 5px;
+     border: solid 2px var(--black-color);
+     border-top-left-radius: 22px;
+               border-top-left-radius: 18px;
+          border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+}
+
+
+.bonuses__logo > span {
+     color: var(--black-color);}
+
+.bonuses__subtitle {
+     font-size: 16px;
+     font-weight: bold;
+     margin-top: 10px;
+     color: var(--black-color);
+}
+
+.bonuses__text {
+     font-size: 14px;
+     color: var(--black-color);
+margin-top: 10px;
+}
+
+.bonuses__list {
+     list-style: none;
+     padding: 0;
+     text-align: left;
+     margin-bottom: 15px;
+}
+
+.bonuses__list li {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 10px;
+}
+
+.bonuses__list div {
+     flex: 1;
+}
+
+.bonuses__list strong {
+     display: block;
+     font-weight: 500;
+     color: var(--text-color);
+}
+
+.bonuses__list p {
+     font-size: 12px;
+     color: var(--text-color);
+           margin: 5px 0 0;
+}
+
+.bonuses__link {
+     font-size: 12px;
+     color: var(--text-color);        margin-bottom: 15px;
+}
+
+.bonuses__link a {
+     color: #0077cc;
+     text-decoration: none;
+}
+
+.bonuses__button {
+     background: var(--black-color);;
+     color: var(--text-color);
+     border: none;
+     padding: 10px 20px;
+     border-radius: 6px;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     border: solid 1px var(--slider-color);
+     margin-top: 10px;
+}
+
+.bonuses__button svg {
+     margin-right: 5px;
+}

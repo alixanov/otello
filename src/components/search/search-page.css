@@ -1,0 +1,631 @@
+
+.search__big__container {
+    min-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search__container {
+    background-color: var(--background-color-search);
+    padding: 24px 0 0 0;
+    border-radius: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search__field {
+    position: relative;
+
+}
+
+.search__field input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-bottom: 1px solid var(--slider-color);
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search__field input::placeholder {
+    color:var(--text-color);
+    font-weight: 500;
+}
+
+.search__button {
+        background-color: var(--light-green-color);
+    color:var(--black-color);
+    padding: 18px 0;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+
+.search__button:hover {
+    background-color: #4cb619;
+}
+
+.promo__container {
+    background-color: var(--background-color-search);    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--light-green-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.promo__text {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: bold;
+    margin: 0;
+}
+
+.promo__discount {
+    font-size: 14px;
+    color: var(--gray-color);
+    margin: 0;
+    margin-top: 10px;
+}
+
+.promo__code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1.5px dashed var(--light-green-color);
+    border-radius: 12px;
+    padding: 7px;
+    margin-top: 4px;
+}
+
+.promo__code-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.promo__code-text span {
+    font-weight: 400;
+    color: var(--text-color);
+ text-align: center;
+}
+
+.promo__code-text span>b {
+    font-weight: bold;
+        color: var(--text-color);
+}
+
+.promo__code__title__txt {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.promo__code__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo__code__qr {
+    width: 66px;
+    height: 66px;
+    object-fit: contain;
+    background-color: var(--light-green-color);
+}
+
+
+
+
+
+
+
+.modal__location {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    /* Повышенный z-index для модального окна */
+}
+
+.modal__content__location {
+    background-color: var(--background-color-search);    padding: 20px;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.modal__content__location h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.location__modal__close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location__select__button {
+    background-color: var(--light-green-color);    color: black;
+    padding: 14px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.modal__location__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+}
+
+.modal__location__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border-radius: 16px;
+    padding: 8px;
+    border: solid 1px #222222;
+
+    background-color:var(--white-color);
+}
+.modal__location__title > svg {
+    color: var(--black-color);
+}
+.modal__location__title>input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 0 8px;
+}
+.modal__location__title > input::placeholder{
+    color:var(--gray-color);
+    font-size: 17px;
+}
+
+.modal__location__bottom__title {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+   
+    
+}
+
+.modal__location__bottom__title p {
+color: var(--text-color);
+    font-size: 17px;
+    margin: 0;
+}
+
+.modal__location__popular {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 5px;
+    max-height: 200px;
+    overflow-y: scroll;
+    /* Включаем скролл */
+    width: 100%;
+    padding-right: 10px;
+}
+
+.modal__location__popular > span {
+    color: var(--text-color);
+}
+.modal__location__popular__map  > p {
+       color: var(--black-color);
+}
+
+
+/* Стилизация скроллбара для WebKit-браузеров (Chrome, Safari, Edge) */
+.modal__location__popular::-webkit-scrollbar {
+    width: 8px;
+    /* Ширина скроллбара */
+    padding: 3px;
+}
+
+.modal__location__popular::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Цвет фона трека */
+    border-radius: 4px;
+    /* Закругление углов трека */
+}
+
+.modal__location__popular::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Цвет ползунка */
+    border-radius: 4px;
+    /* Закругление углов ползунка */
+}
+
+.modal__location__popular::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Цвет ползунка при наведении */
+}
+.modal__location__popular>p {
+    color: #222222;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.modal__location__popular__map {
+    background:var(--white-color);
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__location__popular__map:hover {
+    background: #eaeaea;
+}
+.modal__location__popular__map > p {
+    color: var(--black-color);
+}
+
+
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1040;
+    /* Низкий z-index для модального окна */
+
+}
+
+.modal__content {
+    background:var(--white-color);
+    padding: 16px;
+    border-radius: 24px;
+    max-width: 370px;
+    width: 90%;
+    position: relative;
+}
+
+
+.modal__content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.modal__close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select__button {
+        background-color: var(--light-green-color);
+    color: black;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 24px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Custom DatePicker Styles */
+.react-datepicker {
+    border: none !important;
+    font-family: inherit !important;
+    width: 100% !important;
+}
+
+.react-datepicker__month-container {
+    width: 100% !important;
+}
+
+.react-datepicker__header {
+    background: white !important;
+    border: none !important;
+    padding-top: 0 !important;
+}
+
+.react-datepicker__day-names {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 12px !important;
+    margin-bottom: 8px !important;
+}
+
+.react-datepicker__day-name {
+    color: #666 !important;
+    font-weight: 500 !important;
+    width: 40px !important;
+    margin: 0 !important;
+}
+
+.react-datepicker__month {
+    margin: 0 !important;
+    padding: 0 12px !important;
+}
+
+.react-datepicker__week {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.react-datepicker__day {
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    margin: 0 !important;
+    border-radius: 50% !important;
+    color: black !important;
+    font-weight: 500 !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range {
+    background-color: var(--light-green-color) !important;    color: black !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: var(--light-green-color) !important;
+    color: black !important;
+}
+
+.react-datepicker__day--in-selecting-range {
+    background-color: rgba(92, 214, 31, 0.2) !important;
+}
+
+.react-datepicker__current-month {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+}
+
+.react-datepicker__navigation {
+    top: 12px !important;
+}
+
+.react-datepicker__day--outside-month {
+    color: var(--slider-color) !important;
+}
+
+.react-datepicker__day--disabled {
+    color: var(--slider-color) !important;    cursor: default !important;
+}
+
+.react-datepicker__navigation {
+    top: 20px !important;
+}
+
+
+
+.search__prome__key__icon {
+    width: 41px;
+    height: 41px;
+    background-color: var(--light-green-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.search__prome__key__icon>svg {
+    width: 35px;
+    height: 35px;
+
+}
+
+
+
+.modal__guests__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1040;
+}
+
+.modal__close__guests {
+    position: absolute;
+    right: 24px;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__guests {
+    background-color: var(--background-color-search);
+    border-radius: 20px;
+    padding: 25px;
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.modal__guests>p {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.guests__controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.guests__controls__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.guests__controls__title p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.guests__controls__title span {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 100;
+    color:var(--gray-color);
+}
+
+.guests__controls div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guests__controls button {
+    background-color: #eee;
+    border: none;
+    border-radius: 16px;
+    padding: 11px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.guests__controls button:hover {
+    background-color: #ddd;
+}
+
+.guests__controls span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.guests__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.guests__actions .clear {
+    background-color: #EBEBEB;
+    color: #222222;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.guests__actions .primary {
+    background-color: var(--light-green-color);
+    color: var(--black-color);
+    border: none;
+    border-radius: 16px;
+    padding: 16px 40px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.guests__actions .clear:hover {
+    background-color: #e1e1e1;
+}
+
+.guests__actions .primary:hover {
+    background-color: #4cb619;
+}

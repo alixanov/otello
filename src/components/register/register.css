@@ -1,0 +1,111 @@
+/* Контейнер, делящий экран на две части */
+.register__container {
+     display: flex;
+     height: 100vh;
+     width: 100%;
+}
+
+/* Левая часть (зелёный фон) */
+.register__left {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: start;
+     align-items: start;
+     color: white;
+     padding: 20px;
+          background-color: var(--light-green-color);
+}
+
+.register__left h1 {
+     font-size: 32px;
+     font-weight: bold;
+     font-family: "Montserrat-Bold";
+}
+.register__left h3 {
+     font-size: 22px;
+     margin-top: 10px;
+}
+.register__left p {
+     font-size: 18px;
+     margin-top: 10px;
+}
+
+/* Правая часть (белый фон) */
+.register__right {
+     flex: 2;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     background-color:var(--background-color-search);
+}
+
+.register__buttons {
+     width: 100%;
+     max-width: 350px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.register__button {
+     width: 100%;
+     height: 50px;
+     padding: 12px;
+     border: 1px solid var(--hover--nav);
+     border-radius: 11px;
+     background-color: var(--white-color);
+     font-size: 16px;
+     cursor: pointer;
+     transition: 0.2s;
+     color: var(--black-color);
+
+}
+
+.register__button__start {
+     width: 100%;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     gap: 10px;
+     color:var(--text-color);
+}
+.register__button__start>img {
+     width: 26px;
+}
+
+.register__button:hover {
+     background-color: #2222220d;
+}
+
+.register__button svg {
+     margin-right: 10px;
+     font-size: 22px;
+}
+
+/* Дополнительный текст внизу */
+.register__terms {
+     font-size: 12px;
+     color: var(--text-color);
+     text-align: center;
+     margin-top: 20px;
+     max-width: 350px;
+}
+
+.register__terms a {
+     color: #0077cc;
+     text-decoration: none;
+}
+
+.register__support > a {
+     font-size: 14px;
+     color: #0077cc;
+     text-align: center;
+     
+}
+/* Убираем отступы на странице регистрации */
+.no-padding {
+     padding-inline: 0;
+}

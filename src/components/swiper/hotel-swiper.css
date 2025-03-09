@@ -1,0 +1,109 @@
+.hotel-swiper {
+     width: 100%;
+     margin: auto;
+     margin-bottom: 20px;
+     position: relative;
+}
+
+.swiper-title {
+     font-size: 20px;
+     font-weight: bold;
+     margin-top: 10px;
+     text-align: start;
+     margin-bottom: 10px;
+}
+
+/* Стили карточек */
+.keen-slider {
+     display: flex;
+     overflow: hidden;
+     user-select: none;
+}
+
+.keen-slider__slide {
+     min-width: 33%;
+}
+
+.swiper-card {
+     position: relative;
+     border-radius: 20px;
+     overflow: hidden;
+}
+
+.swiper-card img {
+     width: 100%;
+     height: 280px;
+     object-fit: cover;
+     border-radius: 20px;
+}
+
+.swiper-overlay {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px;
+     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+     color: white;
+     border-radius: 20px;
+}
+
+.swiper-overlay p {
+     font-size: 18px;
+     font-weight: bold;
+     color: white;
+}
+
+.swiper-overlay span {
+     font-size: 14px;
+          color: white;
+}
+
+/* Кастомные кнопки Swiper */
+.custom-swiper-button {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 40px;
+     height: 40px;
+     background: rgba(0, 0, 0, 0.5);
+     border-radius: 50%;
+     border: none;
+     color: white;
+     font-size: 20px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 10;
+     transition: background 0.3s;
+}
+
+.custom-swiper-button:hover {
+     background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+     left: 10px;
+     top: 190px;
+}
+
+.next-button {
+     right: 10px;
+          top: 190px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+     .prev-button {
+          left: 10px;
+     }
+
+     .next-button {
+          right: 10px;
+     }
+
+     .keen-slider__slide {
+          min-width: 100%;
+     }
+}

@@ -1,0 +1,301 @@
+/* Основные стили для контейнера */
+.info__right__container {
+     width: 100%;
+     max-width: 400px;
+     display: flex;
+     align-items: start;
+     justify-content: center;
+     flex-direction: column;
+}
+
+/* Стили для карточки */
+.info__right__card {
+     width: 100%;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     flex-direction: column;
+     gap: 20px;
+     background-color:var(--background-color-search);
+     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+     padding: 15px;
+     border-radius: 22px;
+}
+
+/* Стили для блока с иконкой и текстом */
+.info__right__box {
+     width: 100%;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     gap: 10px;
+     border-bottom: solid .5px var(--slider-color);
+     padding: 5px 5px 15px 5px;
+     cursor: pointer;
+}
+
+.info__right__box .icon {
+     font-size: 25px;
+     width: 24px;
+     height: 24px;
+}
+
+.info__right__box__txt {
+     display: flex;
+     align-items: start;
+     justify-content: center;
+     flex-direction: column;
+     gap: 5px;
+}
+
+.info__right__box__txt>p {
+     font-size: 16px;
+     color:var(--text-color);
+     font-weight: 600;
+}
+
+.info__right__box__txt>span {
+     font-size: 14px;
+     color:var(--gray-color);
+     font-weight: 400;
+}
+
+/* Стили для текстовых ссылок */
+.info__right__txt {
+     width: 100%;
+     display: flex;
+     align-items: start;
+     flex-direction: column;
+     justify-content: start;
+     text-align: start;
+     gap: 10px;
+     margin-top: 20px;
+}
+
+.info__right__txt>a {
+     width: 180px;
+     height: 38px;
+     color:var(--text-color);
+     font-size: 17px;
+     border-radius: 12px;
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     padding: 5px;
+     transition: .5s ease;
+}
+
+.info__right__txt>a:hover {
+     background-color:var(--info-card-btn-color);
+     color: var(--black-color);
+}
+
+
+.info__right__txt>a:nth-child(5) {
+     width: 270px;
+     height: 38px;
+}
+
+.info__right__txt>a:hover {
+background-color: var(--info-card-btn-color);
+     color: var(--black-color);
+}
+/* Стили для модального окна */
+.custom-modal {
+     display: flex;
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     align-items: center;
+     justify-content: center;
+}
+
+.custom-modal-content {
+     position: relative;
+     background-color: var(--background-color-search);
+     width: 100%;
+     max-width: 500px;
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+}
+
+.modal-header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     padding: 20px;
+     border-bottom: 1px solid var(--slider-color);
+}
+
+.modal-header h2 {
+     font-size: 18px;
+     font-weight: 600;
+     margin: 0;
+     color: var(--text-color);
+}
+
+.close-button {
+     position: absolute;
+     right: 20px;
+     top: 50%;
+     transform: translateY(-50%);
+     background: var(--white-color);
+     border: none;
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     font-size: 16px;
+     color: var(--black-color);
+}
+
+/* Стили для гостей */
+.guests-container {
+     padding: 20px;
+}
+
+.guest-type {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 20px;
+}
+
+.guest-info h3 {
+     font-size: 16px;
+     font-weight: 500;
+     margin: 0 0 5px 0;
+     color: var(--text-color);
+}
+
+.guest-info p {
+     font-size: 14px;
+     color: var(--gray-color);
+          margin: 0;
+}
+
+.guest-counter {
+     display: flex;
+     align-items: center;
+}
+
+.counter-btn {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     border: 1px solid var(--slider-color);
+     background: var(--white-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     font-size: 18px;
+     transition: all .5s ease;
+}
+.counter-btn:hover {
+     background-color: var(--info-card-btn-color-hover);
+}
+
+.counter-btn.disabled {
+     opacity: 0.5;
+     cursor: not-allowed;
+}
+
+.counter-value {
+     margin: 0 15px;
+     font-size: 16px;
+     min-width: 20px;
+     text-align: center;
+}
+
+.modal-footer {
+     padding: 15px 20px;
+     display: flex;
+     justify-content: space-between;
+     border-top: 1px solid #f0f0f0;
+}
+
+.apply-button {
+     background-color: var(--light-green-color);
+     color: var(--black-color);
+     border: none;
+     padding: 12px 20px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: 500;
+     font-size: 16px;
+     flex-grow: 1;
+     transition: all .5s ease;
+}
+.apply-button:hover {
+     background-color: #4fb71b; }
+.clear-button {
+     background-color: var(--info-card-btn-color);
+     color: var(--black-color);
+     border: none;
+     padding: 12px 20px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: 500;
+     font-size: 16px;
+     margin-right: 10px;
+          transition: all .5s ease;
+}
+.clear-button:hover {
+     background-color: var(--info-card-btn-color-hover);
+}
+/* Стили для календаря */
+.calendar-modal {
+     position: fixed;
+     top: 0px;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1040;
+}
+
+.calendar-modal-content {
+     background: white;
+     padding: 16px;
+     border-radius: 24px;
+     max-width: 370px;
+     width: 90%;
+     position: relative;
+}
+
+.calendar-modal-content h3 {
+     font-size: 24px;
+     font-weight: 600;
+     margin: 0 0 24px 0;
+     text-align: center;
+}
+
+.calendar-modal-close {
+     position: absolute;
+     right: 24px;
+     top: 24px;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: #f5f5f5;
+     border: none;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+

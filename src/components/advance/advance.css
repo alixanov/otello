@@ -1,0 +1,47 @@
+.advance__video {
+     position: relative;
+     /* Добавлено для контейнера видео */
+     width: 100%;
+     /* Устанавливаем ширину для контейнера */
+     min-width: 600px;
+     /* Максимальная ширина, если нужно */
+     margin: 0 auto;
+     /* Центрируем контейнер */
+}
+ 
+.advance__video>video {
+     width: 100%;
+     border-radius: 12px;
+     opacity: 0.9;
+}
+
+.advance__overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 99%;
+     background: rgba(0, 0, 0, 0.3);
+     /* Полупрозрачный черный фон */
+     border-radius: 12px;
+     /* Скругленные углы для overlay */
+}
+
+.advance__txt {
+     position: absolute;
+     top: 15%;
+     /* Центрирование по вертикали */
+     left: 35%;
+     /* Центрирование по горизонтали */
+     transform: translate(-50%, -50%);
+     border-radius: 12px;
+     /* Скругленные углы */
+}
+
+.advance__txt>h1 {
+     color: var(--white-color);
+     /* Цвет текста белый */
+     text-align: start;
+     /* Центрирование текста */
+     font-family: "Montserrat-Bold";
+}

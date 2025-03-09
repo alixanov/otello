@@ -1,0 +1,137 @@
+.footer__container {
+     width: 100%;
+margin: 20px 0;     
+}
+
+.footer__content {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+}
+
+.footer__left {
+     display: flex;
+     gap: 40px;
+}
+
+.footer__column h4 {
+     margin-bottom: 10px;
+     font-size: 16px;
+     font-weight: bold;
+     color:var(--gray-color);
+}
+
+.footer__column p {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     color:#306CB1;
+     margin: 15px 0;
+     cursor: pointer;
+     transition: all .5s ease;
+}
+
+.footer__column p:hover {
+color: var(--text-color);
+}
+
+.footer__icon {
+     font-size: 18px;
+     color: var(--text-color);
+}
+
+.footer__right {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+}
+
+.qr-code {
+     width: 450px;
+     height: 200px;
+     background-color: var(--background-color-search);     padding: 15px;
+     border-radius: 30px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 10px;
+}
+.qr-code-img {
+width: 140px;
+}
+.location-img {
+     width: 200px;
+     margin-top: -16px;
+}
+
+.qr-icon {
+     font-size: 50px;
+}
+
+.app-icons {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+.app-icons-box {
+     width: 55px;
+     height: 45px;
+     background-color: var(--slider-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 8px;
+}
+.app-icons-box svg {
+     width: 35px;
+     height: 35px;
+}
+
+
+.platform-icon {
+     font-size: 35px;
+     color: var(--black-color);
+     cursor: pointer;
+}
+
+.platform-icon:hover {
+     color:var(--gray-color);
+}
+
+/* Нижний блок */
+.footer__bottom {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: start;
+     margin-top: 30px;
+}
+
+.footer__left__txt span {
+     font-size: 14px;
+     color:var(--gray-color);
+}
+
+.footer__links {
+     width: 800px;
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+     align-items: end;
+     justify-content: end;
+     
+}
+
+.footer__links p {
+     font-size: 14px;
+     color: var(--gray-color);
+     cursor: pointer;
+     white-space: nowrap;
+     /* Чтобы не переносились на новую строку */
+}
+
+.footer__links p:hover {
+     text-decoration: underline;
+}
