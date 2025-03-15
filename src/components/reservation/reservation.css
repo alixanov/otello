@@ -2,15 +2,16 @@
      display: flex;
      flex-direction: column;
      align-items: start;
-     justify-content:start;
+     justify-content: start;
      height: 80vh;
      text-align: center;
-          margin-top: 20px;
+     margin-top: 20px;
 }
 
 .reservation__icon {
      font-size: 100px !important;
-     color: var(--ava-icon);     margin-bottom: 20px;
+     color: var(--ava-icon);
+     margin-bottom: 20px;
 }
 
 .reservation__title {
@@ -27,7 +28,8 @@
 }
 
 .reservation__button {
-     background-color: var(--light-green-color);     color: var(--black-color);
+     background-color: var(--light-green-color);
+     color: var(--black-color);
      font-size: 16px;
      font-weight: 600;
      padding: 14px 26px;
@@ -38,4 +40,324 @@
 }
 
 .reservation__button:hover {
-     background: rgb(88, 197, 72);}
+     background: rgb(88, 197, 72);
+}
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .reservation__container {
+          height: auto;
+          /* Убираем фиксированную высоту для адаптивности */
+          align-items: center;
+          /* Центрируем элементы по горизонтали */
+          justify-content: center;
+          /* Центрируем элементы по вертикали */
+          margin-top: 15px;
+          /* Уменьшаем верхний отступ */
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
+
+     .reservation__icon {
+          font-size: 70px !important;
+          /* Уменьшаем иконку */
+          margin-bottom: 15px;
+          /* Уменьшаем отступ снизу */
+     }
+
+     .reservation__title {
+          font-size: 20px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 8px;
+     }
+
+     .reservation__text {
+          font-size: 14px;
+          /* Уменьшаем текст */
+          margin-bottom: 15px;
+     }
+
+     .reservation__button {
+          font-size: 14px;
+          /* Уменьшаем шрифт кнопки */
+          padding: 12px 20px;
+          /* Уменьшаем внутренние отступы */
+          border-radius: 6px;
+          /* Уменьшаем радиус углов */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .reservation__container {
+          margin-top: 10px;
+          /* Еще меньше верхний отступ */
+          padding: 0 8px;
+     }
+
+     .reservation__icon {
+          font-size: 60px !important;
+          /* Еще сильнее уменьшаем иконку */
+          margin-bottom: 12px;
+     }
+
+     .reservation__title {
+          font-size: 18px;
+          /* Еще меньше заголовок */
+          margin-bottom: 6px;
+     }
+
+     .reservation__text {
+          font-size: 13px;
+          /* Еще меньше текст */
+          margin-bottom: 12px;
+     }
+
+     .reservation__button {
+          font-size: 13px;
+          padding: 10px 16px;
+          /* Еще меньше кнопка */
+          border-radius: 5px;
+     }
+}
+
+/* Стили модального окна (оставлены без изменений для десктопа, но добавлена мобильная адаптация) */
+.cabinet-modal-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 1000;
+}
+
+.cabinet-modal {
+     background: var(--background-color-search);
+     width: 400px;
+     padding: 20px;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+     position: relative;
+}
+
+.cabinet-close {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background: none;
+     border: none;
+     cursor: pointer;
+     font-size: 20px;
+     color: var(--text-color);
+}
+
+.cabinet-modal h2 {
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+.cabinet-modal-content {
+     display: flex;
+     flex-direction: column;
+}
+
+.cabinet__form__modal {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.modal-subtitle {
+     font-size: 16px;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+}
+
+.modal-description {
+     font-size: 14px;
+     color: var(--text-color);
+}
+
+.modal-phone-input input {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid var(--slider-color);
+     border-radius: 6px;
+     font-size: 14px;
+}
+
+.modal-continue-button {
+     background-color: var(--light-green-color);
+     color: var(--black-color);
+     padding: 10px;
+     border: none;
+     border-radius: 6px;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+}
+
+.modal-separator {
+     text-align: center;
+     margin: 10px 0;
+     color: var(--gray-color);
+}
+
+.modal-sber-id-button {
+     background: var(--black-color);
+     color: var(--text-color);
+     padding: 10px;
+     border: none;
+     border-radius: 6px;
+     font-size: 14px;
+     font-weight: bold;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+}
+
+.modal-sber-card {
+     margin-top: 10px;
+}
+
+.modal-sber-id-description {
+     font-size: 12px;
+     color: var(--text-color);
+}
+
+.modal-other-ways-button {
+     font-size: 14px;
+     color: #0077cc;
+     text-decoration: none;
+     text-align: center;
+     margin-top: 10px;
+}
+
+.modal-footer {
+     font-size: 12px;
+     color: var(--gray-color);
+     margin-top: 10px;
+     text-align: center;
+}
+
+/* Медиа-запросы для модального окна на мобильных устройствах (до 768px) */
+@media (max-width: 768px) {
+     .cabinet-modal {
+          width: 90%;
+          /* Уменьшаем ширину до 90% экрана */
+          padding: 15px;
+          /* Уменьшаем отступы */
+          border-radius: 10px;
+          /* Уменьшаем радиус углов */
+     }
+
+     .cabinet-close {
+          top: 8px;
+          right: 8px;
+          font-size: 18px;
+          /* Уменьшаем иконку закрытия */
+     }
+
+     .cabinet-modal h2 {
+          font-size: 16px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 8px;
+     }
+
+     .modal-subtitle {
+          font-size: 14px;
+          /* Уменьшаем подзаголовок */
+     }
+
+     .modal-description {
+          font-size: 13px;
+          /* Уменьшаем описание */
+     }
+
+     .modal-phone-input input {
+          padding: 8px;
+          /* Уменьшаем отступы в инпуте */
+          font-size: 13px;
+          border-radius: 5px;
+     }
+
+     .modal-continue-button,
+     .modal-sber-id-button {
+          padding: 8px;
+          /* Уменьшаем кнопки */
+          font-size: 13px;
+          border-radius: 5px;
+     }
+
+     .modal-sber-id-description {
+          font-size: 11px;
+          /* Уменьшаем текст описания */
+     }
+
+     .modal-other-ways-button {
+          font-size: 13px;
+     }
+
+     .modal-footer {
+          font-size: 11px;
+          /* Уменьшаем футер */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .cabinet-modal {
+          width: 95%;
+          /* Еще больше увеличиваем ширину */
+          padding: 12px;
+     }
+
+     .cabinet-close {
+          font-size: 16px;
+     }
+
+     .cabinet-modal h2 {
+          font-size: 14px;
+     }
+
+     .modal-subtitle {
+          font-size: 13px;
+     }
+
+     .modal-description {
+          font-size: 12px;
+     }
+
+     .modal-phone-input input {
+          padding: 6px;
+          font-size: 12px;
+     }
+
+     .modal-continue-button,
+     .modal-sber-id-button {
+          padding: 6px;
+          font-size: 12px;
+     }
+
+     .modal-sber-id-description {
+          font-size: 10px;
+     }
+
+     .modal-other-ways-button {
+          font-size: 12px;
+     }
+
+     .modal-footer {
+          font-size: 10px;
+     }
+}

@@ -16,7 +16,7 @@ const MostLiked = () => {
      useEffect(() => {
           const mostLikedHotelIds = JSON.parse(localStorage.getItem('favoriteHotels')) || [];
 
-          axios.get('https://otello-server.vercel.app/api/getall')
+          axios.get('https://otello-server.vercel.app/api/getall') 
                .then(response => {
                     const filteredHotels = response.data.filter(hotel => mostLikedHotelIds.includes(hotel._id));
                     setMostLikedHotels(filteredHotels);

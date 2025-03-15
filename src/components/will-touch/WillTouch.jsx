@@ -3,7 +3,6 @@ import "./will-touch.css"
 import bell from "../../assets/bell.png"
 import bolt from "../../assets/bolt.png"
 
-
 const WillTouch = () => {
      return (
           <div className="will__touch__container">
@@ -30,8 +29,8 @@ const WillTouch = () => {
 
                {/* Декоративные элементы (иконки) */}
                <div className="will__touch__icons">
-                    <img src={bell} className="icon bell-icon" />
-                    <img src={bolt} className="icon bolt-icon" />
+                    <img src={bell} className="icon bell-icon" alt="Bell Icon" />
+                    <img src={bolt} className="icon bolt-icon" alt="Bolt Icon" />
                </div>
           </div>
      );

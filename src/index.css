@@ -18,34 +18,35 @@
 :root {
   --background-color: #F6F5F4;
   --text-color: #222222;
-  --background-color-search:white;
-  --slider-color:#ccc;
-  --hover--nav:#EBEBEB;
-  --active-nav:#EBEBEB;
-  --modal-bottom-txt:#222222;
-  --modal-btn-bg:#ebebeb;
-  --rating-color:rgb(50, 47, 44);
-/* o'zgarmas ranglar */
-  --gray-color:gray;
-  --black-color:#222222;
-    --white-color: white;
-    --info-card-btn-color:#E3E3E2;
-    --info-card-btn-color-hover:#d8d8d8;
-    --ava-icon:#d3d3d3;
-    --light-green-color:#5bd61e;
+  --background-color-search: white;
+  --slider-color: #ccc;
+  --hover--nav: #EBEBEB;
+  --active-nav: #EBEBEB;
+  --modal-bottom-txt: #222222;
+  --modal-btn-bg: #ebebeb;
+  --rating-color: rgb(50, 47, 44);
+
+  /* o'zgarmas ranglar */
+  --gray-color: gray;
+  --black-color: #222222;
+  --white-color: white;
+  --info-card-btn-color: #E3E3E2;
+  --info-card-btn-color-hover: #d8d8d8;
+  --ava-icon: #d3d3d3;
+  --light-green-color: #5bd61e;
 }
+
 [data-theme="dark"] {
   --background-color: #121110;
   --text-color: white;
   --background-color-search: #211f1e;
   --slider-color: white;
   --hover--nav: #ebebeb7b;
-    --active-nav: #ebebeb50;
-      --modal-bottom-txt: #ccc;
-        --modal-btn-bg: #403d3c;
-          --rating-color:white;
+  --active-nav: #ebebeb50;
+  --modal-bottom-txt: #ccc;
+  --modal-btn-bg: #403d3c;
+  --rating-color: white;
 }
-
 
 html,
 body {
@@ -55,9 +56,9 @@ body {
   /* Убираем горизонтальный скролл */
   font-family: "Montserrat-Regular";
   background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-    /* Плавный переход */
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  /* Плавный переход */
 }
 
 #root {
@@ -74,4 +75,58 @@ body {
   /* Основной контент займет всю доступную высоту */
   width: 100%;
   padding-inline: 70px;
+}
+
+/* Существующие медиа-запросы */
+@media (max-width: 989px) {
+  .main {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-inline: 10px;
+  }
+}
+
+/* Новые медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    font-size: 14px;
+    /* Уменьшаем базовый размер шрифта для компактности */
+  }
+
+  #root {
+    max-width: 100%;
+    /* Убираем ограничение по ширине для мобильных */
+  }
+
+  .main {
+    padding-inline: 8px;
+    /* Еще сильнее уменьшаем боковые отступы для логичного использования пространства */
+    padding-top: 10px;
+    /* Добавляем небольшой отступ сверху для эстетики */
+    padding-bottom: 20px;
+    /* Увеличиваем отступ снизу для удобства прокрутки */
+  }
+}
+
+/* Дополнительные медиа-запросы для экранов до 480px (очень маленькие устройства) */
+@media (max-width: 480px) {
+
+  html,
+  body {
+    font-size: 13px;
+    /* Еще чуть уменьшаем шрифт для маленьких экранов */
+  }
+
+  .main {
+    padding-inline: 5px;
+    /* Минимизируем боковые отступы */
+    padding-bottom: 15px;
+    /* Уменьшаем нижний отступ */
+  }
 }

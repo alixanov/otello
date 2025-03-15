@@ -1,6 +1,8 @@
+/* Существующие стили для десктопа остаются нетронутыми */
+
 .footer__container {
      width: 100%;
-margin: 20px 0;     
+     margin: 20px 0;
 }
 
 .footer__content {
@@ -18,21 +20,21 @@ margin: 20px 0;
      margin-bottom: 10px;
      font-size: 16px;
      font-weight: bold;
-     color:var(--gray-color);
+     color: var(--gray-color);
 }
 
 .footer__column p {
      display: flex;
      align-items: center;
      gap: 8px;
-     color:#306CB1;
+     color: #306CB1;
      margin: 15px 0;
      cursor: pointer;
      transition: all .5s ease;
 }
 
 .footer__column p:hover {
-color: var(--text-color);
+     color: var(--text-color);
 }
 
 .footer__icon {
@@ -50,7 +52,8 @@ color: var(--text-color);
 .qr-code {
      width: 450px;
      height: 200px;
-     background-color: var(--background-color-search);     padding: 15px;
+     background-color: var(--background-color-search);
+     padding: 15px;
      border-radius: 30px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
      display: flex;
@@ -58,9 +61,11 @@ color: var(--text-color);
      justify-content: space-between;
      gap: 10px;
 }
+
 .qr-code-img {
-width: 140px;
+     width: 140px;
 }
+
 .location-img {
      width: 200px;
      margin-top: -16px;
@@ -75,6 +80,7 @@ width: 140px;
      flex-direction: column;
      gap: 10px;
 }
+
 .app-icons-box {
      width: 55px;
      height: 45px;
@@ -84,11 +90,11 @@ width: 140px;
      justify-content: center;
      border-radius: 8px;
 }
+
 .app-icons-box svg {
      width: 35px;
      height: 35px;
 }
-
 
 .platform-icon {
      font-size: 35px;
@@ -97,7 +103,7 @@ width: 140px;
 }
 
 .platform-icon:hover {
-     color:var(--gray-color);
+     color: var(--gray-color);
 }
 
 /* Нижний блок */
@@ -111,7 +117,7 @@ width: 140px;
 
 .footer__left__txt span {
      font-size: 14px;
-     color:var(--gray-color);
+     color: var(--gray-color);
 }
 
 .footer__links {
@@ -121,7 +127,6 @@ width: 140px;
      flex-wrap: wrap;
      align-items: end;
      justify-content: end;
-     
 }
 
 .footer__links p {
@@ -129,9 +134,132 @@ width: 140px;
      color: var(--gray-color);
      cursor: pointer;
      white-space: nowrap;
-     /* Чтобы не переносились на новую строку */
 }
 
 .footer__links p:hover {
      text-decoration: underline;
+}
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .footer__container {
+          margin: 10px 0;
+          /* Уменьшаем внешние отступы */
+          padding: 0 10px;
+          /* Добавляем небольшие боковые отступы */
+     }
+
+     .footer__content {
+          flex-direction: column;
+          /* Вертикальное расположение */
+          align-items: center;
+          gap: 20px;
+          /* Добавляем расстояние между секциями */
+     }
+
+     .footer__left {
+          flex-direction: column;
+          /* Колонки вертикально */
+          gap: 20px;
+          width: 100%;
+          text-align: center;
+          /* Центрируем текст */
+     }
+
+     .footer__column h4 {
+          font-size: 14px;
+          /* Уменьшаем заголовки */
+          margin-bottom: 8px;
+     }
+
+     .footer__column p {
+          font-size: 14px;
+          /* Уменьшаем текст ссылок */
+          margin: 10px 0;
+          justify-content: center;
+          /* Центрируем ссылки с иконками */
+     }
+
+     .footer__icon {
+          font-size: 16px;
+          /* Уменьшаем иконки */
+     }
+
+     .footer__right {
+          width: 100%;
+          /* Занимает всю ширину */
+          align-items: center;
+     }
+
+     .qr-code {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          height: auto;
+          /* Высота адаптируется */
+          padding: 12px;
+          border-radius: 20px;
+          /* Уменьшаем радиус */
+          flex-direction: column;
+          /* Вертикальное расположение */
+          gap: 15px;
+     }
+
+     .qr-code-img {
+          width: 100px;
+          /* Уменьшаем QR-код */
+     }
+
+     .location-img {
+          width: 150px;
+          /* Уменьшаем изображение локации */
+          margin-top: 0;
+          /* Убираем отрицательный отступ */
+     }
+
+     .app-icons {
+          flex-direction: row;
+          /* Иконки приложений в ряд */
+          gap: 8px;
+          justify-content: center;
+     }
+
+     .app-icons-box {
+          width: 45px;
+          /* Уменьшаем размер иконок */
+          height: 35px;
+          border-radius: 6px;
+     }
+
+     .app-icons-box svg {
+          width: 25px;
+          /* Уменьшаем сами иконки */
+          height: 25px;
+     }
+
+     .footer__bottom {
+          flex-direction: column;
+          /* Вертикальное расположение */
+          align-items: center;
+          gap: 15px;
+          margin-top: 20px;
+          text-align: center;
+     }
+
+     .footer__left__txt span {
+          font-size: 12px;
+          /* Уменьшаем копирайт */
+     }
+
+     .footer__links {
+          width: 100%;
+          /* Занимает всю ширину */
+          justify-content: center;
+          /* Центрируем ссылки */
+          gap: 8px;
+     }
+
+     .footer__links p {
+          font-size: 12px;
+          /* Уменьшаем текст ссылок */
+     }
 }

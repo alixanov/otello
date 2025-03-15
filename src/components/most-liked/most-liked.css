@@ -20,26 +20,25 @@
      justify-content: start;
      flex-wrap: wrap;
 }
+
 /* Список отелей */
 .most-liked__header {
-width: 350px;
-height: 103px;
-     background:var(--background-color-search);
-     padding: 15px 10Px;
+     width: 350px;
+     height: 103px;
+     background: var(--background-color-search);
+     padding: 15px 10px;
      border-radius: 12px;
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
      display: flex;
      align-items: start;
      flex-direction: column;
      gap: 5px;
-
-     
 }
 
 .most-liked__all {
      font-size: 16px;
      font-weight: 600;
-     color:var(--text-color);
+     color: var(--text-color);
 }
 
 .most-liked__count {
@@ -58,7 +57,7 @@ height: 103px;
 .most-liked__city {
      width: 350px;
      background: var(--background-color-search);
-     padding: 10px 10Px;
+     padding: 10px 10px;
      border-radius: 12px;
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
      display: flex;
@@ -86,25 +85,24 @@ height: 103px;
      margin-top: 3px;
 }
 
-
 .most-liked__hotel:hover {
      transform: scale(1.05);
 }
 
 /* Картинка */
 .most-liked-hotel-image {
-    width: 80px;
-    height: 80px;
+     width: 80px;
+     height: 80px;
      object-fit: cover;
      border-radius: 12px;
 }
 
 /* Блок авторизации */
 .most-liked__login__prompt {
-width: 350px;
+     width: 350px;
      height: 100px;
      background: var(--background-color-search);
-     padding: 15px 10Px;
+     padding: 15px 10px;
      border-radius: 12px;
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
      display: flex;
@@ -123,7 +121,6 @@ width: 350px;
      justify-content: center;
 }
 
-
 .most-liked__login__button {
      background-color: var(--light-green-color);
      color: var(--black-color);
@@ -140,3 +137,146 @@ width: 350px;
      background: #71ca3a;
 }
 
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .most-liked__container {
+          margin-bottom: 15px;
+          /* Уменьшаем нижний отступ */
+          padding: 0 10px;
+          /* Добавляем боковые отступы для аккуратности */
+     }
+
+     .most-liked__container h1 {
+          font-size: 24px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 15px;
+          margin-top: 8px;
+     }
+
+     .most-liked__cards {
+          gap: 10px;
+          /* Уменьшаем расстояние между карточками */
+          justify-content: center;
+          /* Центрируем карточки */
+     }
+
+     .most-liked__header {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          height: auto;
+          /* Высота адаптируется под содержимое */
+          padding: 12px;
+          border-radius: 10px;
+     }
+
+     .most-liked__all {
+          font-size: 14px;
+          /* Уменьшаем шрифт */
+     }
+
+     .most-liked__count {
+          font-size: 14px;
+     }
+
+     .most-liked__city {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          padding: 12px;
+          border-radius: 10px;
+          flex-direction: column;
+          /* Вертикальное расположение для логичности */
+          gap: 10px;
+     }
+
+     .most-liked__city__title h2 {
+          font-size: 14px;
+          /* Уменьшаем шрифт заголовка города */
+     }
+
+     .most-liked__city__count {
+          font-size: 14px;
+          /* Уменьшаем шрифт количества */
+          margin-top: 2px;
+     }
+
+     .most-liked-hotel-image {
+          width: 70px;
+          /* Уменьшаем изображения отелей */
+          height: 70px;
+          border-radius: 10px;
+     }
+
+     .most-liked__login__prompt {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          height: auto;
+          /* Высота адаптируется */
+          padding: 12px;
+          border-radius: 10px;
+          margin-top: 15px;
+          gap: 8px;
+     }
+
+     .most-liked__login__prompt p {
+          font-size: 13px;
+          /* Уменьшаем шрифт текста */
+          text-align: center;
+          /* Центрируем текст */
+          margin-bottom: 8px;
+     }
+
+     .most-liked__login__button {
+          font-size: 14px;
+          /* Уменьшаем шрифт кнопки */
+          padding: 8px 16px;
+          border-radius: 6px;
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .most-liked__container h1 {
+          font-size: 20px;
+          /* Еще сильнее уменьшаем заголовок */
+          margin-bottom: 12px;
+     }
+
+     .most-liked__header {
+          padding: 10px;
+     }
+
+     .most-liked__all,
+     .most-liked__count {
+          font-size: 13px;
+     }
+
+     .most-liked__city {
+          padding: 10px;
+          gap: 8px;
+     }
+
+     .most-liked__city__title h2,
+     .most-liked__city__count {
+          font-size: 13px;
+     }
+
+     .most-liked-hotel-image {
+          width: 60px;
+          /* Еще меньше изображения */
+          height: 60px;
+     }
+
+     .most-liked__login__prompt {
+          padding: 10px;
+          margin-top: 12px;
+     }
+
+     .most-liked__login__prompt p {
+          font-size: 12px;
+     }
+
+     .most-liked__login__button {
+          font-size: 13px;
+          padding: 6px 14px;
+     }
+}

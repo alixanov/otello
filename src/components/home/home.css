@@ -6,9 +6,66 @@
      justify-content: flex-start;
      margin-top: 30px;
 }
+
 .home__card {
      display: flex;
      align-items: start;
      justify-content: start;
      gap: 20px;
+}
+
+.home__csearch__card {
+     display: none;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+
+/* Существующий медиа-запрос для экранов до 989px */
+@media (max-width: 989px) {
+     .home__card {
+          display: none;
+     }
+
+     .home__csearch__card {
+          display: block;
+     }
+}
+
+/* Новые медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .home__container {
+          margin-top: 20px;
+          /* Уменьшаем верхний отступ */
+          padding: 0 10px;
+          /* Добавляем боковые отступы для аккуратности */
+          align-items: center;
+          /* Центрируем содержимое */
+     }
+
+     .home__csearch__card {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          padding: 15px;
+          /* Добавляем внутренние отступы */
+          gap: 15px;
+          /* Уменьшаем расстояние между элементами */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .home__container {
+          margin-top: 15px;
+          /* Еще меньше верхний отступ */
+          padding: 0 8px;
+          /* Уменьшаем боковые отступы */
+     }
+
+     .home__csearch__card {
+          padding: 10px;
+          /* Уменьшаем внутренние отступы */
+          gap: 10px;
+          /* Еще меньше расстояние между элементами */
+     }
 }

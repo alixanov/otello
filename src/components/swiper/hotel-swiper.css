@@ -56,7 +56,7 @@
 
 .swiper-overlay span {
      font-size: 14px;
-          color: white;
+     color: white;
 }
 
 /* Кастомные кнопки Swiper */
@@ -90,20 +90,49 @@
 
 .next-button {
      right: 10px;
-          top: 190px;
+     top: 190px;
 }
 
 /* Адаптация для мобильных */
 @media (max-width: 768px) {
-     .prev-button {
-          left: 10px;
-     }
-
-     .next-button {
-          right: 10px;
+     .swiper-title {
+          font-size: 18px;
+          text-align: center;
      }
 
      .keen-slider__slide {
           min-width: 100%;
+     }
+
+     .swiper-card img {
+          height: 200px;
+     }
+
+     .swiper-overlay {
+          padding: 15px;
+     }
+
+     .swiper-overlay p {
+          font-size: 16px;
+     }
+
+     .swiper-overlay span {
+          font-size: 12px;
+     }
+
+     .custom-swiper-button {
+          width: 30px;
+          height: 30px;
+          font-size: 16px;
+     }
+
+     .prev-button {
+          left: 5px;
+          top: 50%;
+     }
+
+     .next-button {
+          right: 5px;
+          top: 50%;
      }
 }

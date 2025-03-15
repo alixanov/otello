@@ -629,3 +629,231 @@ color: var(--text-color);
 .guests__actions .primary:hover {
     background-color: #4cb619;
 }
+
+
+/* Существующие стили остаются без изменений для десктопа */
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+    .search__big__container {
+        min-width: 100%;
+        padding: 0 10px;
+        /* Уменьшаем отступы по бокам */
+    }
+
+    .search__container {
+        padding: 16px 0 0 0;
+        /* Уменьшаем внутренний отступ сверху */
+        border-radius: 16px;
+        /* Скругляем углы меньше для компактности */
+        gap: 8px;
+        /* Уменьшаем расстояние между элементами */
+    }
+
+    .search__field input {
+        padding: 12px 12px 12px 40px;
+        /* Уменьшаем padding и корректируем под иконку */
+        font-size: 14px;
+        /* Уменьшаем шрифт для компактности */
+    }
+
+    .search__field {
+        position: relative;
+    }
+
+    .search__field>div {
+        /* Иконки слева */
+        left: 10px !important;
+        /* Корректируем позицию иконок */
+    }
+
+    .search__button {
+        padding: 14px 0;
+        /* Уменьшаем высоту кнопки */
+        font-size: 16px;
+        /* Чуть меньший шрифт */
+        border-radius: 0 0 16px 16px;
+        /* Упрощаем радиус */
+    }
+
+    .promo__container {
+        padding: 16px;
+        /* Уменьшаем внутренние отступы */
+        margin-top: 12px;
+        /* Уменьшаем внешний отступ сверху */
+        border-radius: 12px;
+        /* Уменьшаем радиус */
+        margin-bottom: 20px;
+    }
+
+    .promo__text {
+        font-size: 14px;
+        /* Уменьшаем шрифт */
+    }
+
+    .promo__discount {
+        font-size: 12px;
+        /* Уменьшаем шрифт */
+        margin-top: 8px;
+    }
+
+    .promo__code {
+        padding: 6px;
+        /* Уменьшаем внутренние отступы */
+        flex-direction: column;
+        /* Вертикальное расположение для компактности */
+        gap: 8px;
+    }
+
+    .promo__code__qr {
+        width: 50px;
+        /* Уменьшаем QR-код */
+        height: 50px;
+    }
+
+    .promo__code__title {
+        flex-direction: column;
+        /* Вертикальное расположение текста и QR */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Модальное окно локации */
+    .modal__content__location {
+        padding: 16px;
+        /* Уменьшаем отступы */
+        border-radius: 16px;
+        width: 95%;
+        /* Чуть шире для мобильных */
+        max-width: none;
+        /* Убираем фиксированную ширину */
+    }
+
+    .modal__content__location h3 {
+        font-size: 18px;
+        /* Уменьшаем заголовок */
+        margin-bottom: 12px;
+    }
+
+    .location__modal__close {
+        right: 10px;
+        /* Корректируем позицию кнопки закрытия */
+        top: 10px;
+        width: 32px;
+        /* Уменьшаем кнопку */
+        height: 32px;
+    }
+
+    .modal__location__title>input {
+        font-size: 15px;
+        /* Уменьшаем шрифт ввода */
+        padding: 0 6px;
+    }
+
+    .modal__location__popular {
+        max-height: 150px;
+        /* Уменьшаем высоту списка */
+    }
+
+    .modal__location__popular>span,
+    .modal__location__popular__map>p {
+        font-size: 15px;
+        /* Уменьшаем шрифт */
+    }
+
+    .location__select__button {
+        padding: 12px;
+        /* Уменьшаем кнопку */
+        font-size: 15px;
+        margin-top: 16px;
+    }
+
+    /* Модальное окно гостей */
+    .modal__guests {
+        width: 90%;
+        /* Уменьшаем ширину */
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .modal__guests>p {
+        font-size: 18px;
+        /* Уменьшаем заголовок */
+        margin-bottom: 16px;
+    }
+
+    .guests__controls {
+        flex-direction: column;
+        /* Вертикальное расположение */
+        gap: 10px;
+        margin: 8px 0;
+    }
+
+    .guests__controls__title p {
+        font-size: 15px;
+    }
+
+    .guests__controls__title span {
+        font-size: 13px;
+    }
+
+    .guests__controls button {
+        padding: 8px 20px;
+        /* Уменьшаем кнопки +/- */
+        font-size: 14px;
+    }
+
+    .guests__actions {
+        flex-direction: column;
+        /* Вертикальное расположение кнопок */
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .guests__actions .clear,
+    .guests__actions .primary {
+        padding: 12px;
+        /* Уменьшаем кнопки */
+        font-size: 15px;
+    }
+
+    /* Модальное окно календаря */
+    .modal__content {
+        padding: 12px;
+        border-radius: 16px;
+        max-width: 90%;
+    }
+
+    .modal__content h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .modal__close {
+        right: 12px;
+        top: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .react-datepicker__day-name,
+    .react-datepicker__day {
+        width: 36px !important;
+        /* Уменьшаем дни */
+        height: 36px !important;
+        line-height: 36px !important;
+    }
+
+    .react-datepicker__current-month {
+        font-size: 16px !important;
+    }
+
+    .select__button {
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 16px;
+    }
+}
+
+
+

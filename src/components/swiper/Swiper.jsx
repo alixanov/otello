@@ -25,6 +25,11 @@ const HotelSwiper = () => {
           created(slider) {
                slider.container.style.scrollBehavior = "auto";
           },
+          breakpoints: {
+               "(max-width: 768px)": {
+                    slides: { perView: 1, spacing: 10 },
+               },
+          },
      });
 
      return (

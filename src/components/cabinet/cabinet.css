@@ -1,8 +1,8 @@
 .cabinet__big__container {
-width: 100%;
-display: flex;
-align-items: center;
-flex-direction: column;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
 }
 
 .cabinet__container {
@@ -21,7 +21,6 @@ flex-direction: column;
      flex-direction: column;
      align-items: flex-start;
 }
-
 
 .cabinet__avatar {
      font-size: 120px !important;
@@ -43,19 +42,20 @@ flex-direction: column;
 
 .cabinet__button {
      background-color: var(--light-green-color);
-          color:var(--black-color);
-          padding: 18px 24px;
-          border: none;
-          font-size: 17px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: background-color 0.2s;
-          margin-top: 8px;
-          border-radius: 12px;
+     color: var(--black-color);
+     padding: 18px 24px;
+     border: none;
+     font-size: 17px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: background-color 0.2s;
+     margin-top: 8px;
+     border-radius: 12px;
 }
 
 .cabinet__button:hover {
-     background-color: var(--light-green-color);}
+     background-color: var(--light-green-color);
+}
 
 .cabinet__theme {
      width: 700px;
@@ -66,15 +66,15 @@ flex-direction: column;
      justify-content: space-between;
      margin-top: 20px;
      padding: 10px;
-               border-radius: 18px;
-               border: solid 1px var(--slider-color);
+     border-radius: 18px;
+     border: solid 1px var(--slider-color);
 }
 
 .cabinet__theme span {
      margin-right: 10px;
      font-size: 14px;
      font-weight: 700;
-color:var(--text-color) ;
+     color: var(--text-color);
 }
 
 .toggle-switch {
@@ -97,7 +97,7 @@ color:var(--text-color) ;
      left: 0;
      right: 0;
      bottom: 0;
-     background-color:var(--slider-color);
+     background-color: var(--slider-color);
      transition: 0.4s;
      border-radius: 34px;
 }
@@ -109,12 +109,10 @@ color:var(--text-color) ;
      width: 26px;
      left: 4px;
      bottom: 4px;
-     background-color:var(--background-color-search);
+     background-color: var(--background-color-search);
      transition: 0.4s;
      border-radius: 50%;
 }
-
-
 
 input:checked+.slider:before {
      transform: translateX(17px);
@@ -125,6 +123,85 @@ input:checked+.slider:before {
      width: 400px;
 }
 
+/* Стили для промо-контейнера (добавлены из вашего кода) */
+.promo__container {
+     background-color: var(--background-color-search);
+     padding: 20px;
+     border-radius: 16px;
+     border: 1px solid var(--light-green-color);
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+}
+
+.promo__code__title {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.promo__code__title__txt {
+     display: flex;
+     flex-direction: column;
+}
+
+.promo__text {
+     font-size: 16px;
+     color: var(--text-color);
+     font-weight: bold;
+     margin: 0;
+}
+
+.promo__discount {
+     font-size: 14px;
+     color: var(--gray-color);
+     margin: 10px 0 0;
+}
+
+.promo__code__qr {
+     width: 66px;
+     height: 66px;
+     object-fit: contain;
+     background-color: var(--light-green-color);
+}
+
+.promo__code {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 12px;
+     border: 1.5px dashed var(--light-green-color);
+     border-radius: 12px;
+     padding: 7px;
+     margin-top: 4px;
+}
+
+.promo__code-text {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+.search__prome__key__icon {
+     width: 41px;
+     height: 41px;
+     background-color: var(--light-green-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 12px;
+}
+
+.promo__code-text span {
+     font-weight: 400;
+     color: var(--text-color);
+     text-align: center;
+}
+
+.promo__code-text span>b {
+     font-weight: bold;
+     color: var(--text-color);
+}
 
 /* Стили для модального окна */
 .cabinet-modal-overlay {
@@ -141,29 +218,23 @@ input:checked+.slider:before {
 }
 
 .cabinet-modal {
-     background:var(--background-color-search);
+     background: var(--background-color-search);
      width: 400px;
      max-height: 90vh;
-     /* Ограничение по высоте */
      padding: 20px;
      border-radius: 12px;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
      text-align: center;
      position: relative;
      overflow: hidden;
-     /* Скрываем скролл у основного контейнера */
 }
 
 .cabinet-modal-content {
      max-height: calc(90vh - 100px);
-     /* Высота контента с учетом заголовка и кнопки закрытия */
      overflow-y: auto;
-     /* Скролл только для контента */
      padding-right: 10px;
-     /* Отступ для скролла */
 }
 
-/* Стилизация скролла */
 .cabinet-modal-content::-webkit-scrollbar {
      width: 6px;
 }
@@ -176,6 +247,7 @@ input:checked+.slider:before {
 .cabinet-modal-content::-webkit-scrollbar-track {
      background: #f1f1f1;
 }
+
 .cabinet-close {
      position: absolute;
      top: 10px;
@@ -224,10 +296,11 @@ input:checked+.slider:before {
      margin-bottom: 15px;
      margin-left: 2px;
 }
+
 .modal-phone-input input {
      padding: 14px;
-     border: solid 1px var(--hover--nav);  
-        border-radius: 8px;
+     border: solid 1px var(--hover--nav);
+     border-radius: 8px;
      font-size: 14px;
      flex: 1;
 }
@@ -264,7 +337,7 @@ input:checked+.slider:before {
 
 .modal-sber-id-button {
      background-color: var(--background-color-search);
-     color:var(--black-color);
+     color: var(--black-color);
      border: none;
      padding: 12px 20px;
      border-radius: 8px;
@@ -277,7 +350,7 @@ input:checked+.slider:before {
      align-items: center;
      justify-content: center;
      gap: 10px;
-     color:var(--text-color);
+     color: var(--text-color);
 }
 
 .modal-sber-id-button>svg {
@@ -307,7 +380,7 @@ input:checked+.slider:before {
 
 .modal-other-ways-button {
      background-color: var(--modal-btn-bg);
-     color:var(--text-color);
+     color: var(--text-color);
      border: none;
      padding: 12px 20px;
      border-radius: 8px;
@@ -318,7 +391,8 @@ input:checked+.slider:before {
      display: flex;
      align-items: center;
      justify-content: center;
-     border: solid 1px var(--hover--nav);}
+     border: solid 1px var(--hover--nav);
+}
 
 .modal-other-ways-button:hover {
      background-color: var(--hover--nav);
@@ -331,4 +405,326 @@ input:checked+.slider:before {
      margin-left: -15px;
 }
 
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .cabinet__container {
+          flex-direction: column;
+          /* Вертикальное расположение */
+          align-items: center;
+          /* Центрируем содержимое */
+          margin-top: 15px;
+          /* Уменьшаем верхний отступ */
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
 
+     .cabinet__left {
+          align-items: center;
+          /* Центрируем элементы внутри */
+          text-align: center;
+          width: 100%;
+          /* Растягиваем на всю ширину */
+     }
+
+     .cabinet__avatar {
+          font-size: 80px !important;
+          /* Уменьшаем аватар */
+     }
+
+     .cabinet__title {
+          font-size: 18px;
+          /* Уменьшаем заголовок */
+          margin-top: 8px;
+     }
+
+     .cabinet__subtitle {
+          font-size: 13px;
+          /* Уменьшаем подзаголовок */
+          margin-bottom: 15px;
+     }
+
+     .cabinet__button {
+          padding: 14px 20px;
+          /* Уменьшаем кнопку */
+          font-size: 15px;
+          border-radius: 10px;
+          margin-top: 6px;
+     }
+
+     .cabinet__theme {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          height: 50px;
+          padding: 8px;
+          border-radius: 14px;
+          margin-top: 15px;
+     }
+
+     .cabinet__theme span {
+          font-size: 13px;
+     }
+
+     .toggle-switch {
+          width: 50px;
+          /* Уменьшаем переключатель */
+          height: 28px;
+     }
+
+     .slider {
+          border-radius: 28px;
+     }
+
+     .slider:before {
+          height: 22px;
+          width: 22px;
+          left: 3px;
+          bottom: 3px;
+     }
+
+     input:checked+.slider:before {
+          transform: translateX(14px);
+     }
+
+     .cabinet__right {
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          margin-top: 20px;
+          /* Добавляем отступ сверху */
+     }
+
+     .promo__container {
+          padding: 15px;
+          /* Уменьшаем внутренние отступы */
+          border-radius: 12px;
+     }
+
+     .promo__text {
+          font-size: 14px;
+          /* Уменьшаем текст */
+     }
+
+     .promo__discount {
+          font-size: 12px;
+          margin-top: 8px;
+     }
+
+     .promo__code__qr {
+          width: 50px;
+          /* Уменьшаем QR-код */
+          height: 50px;
+     }
+
+     .promo__code {
+          padding: 6px;
+          border-radius: 10px;
+     }
+
+     .search__prome__key__icon {
+          width: 35px;
+          height: 35px;
+          border-radius: 10px;
+     }
+
+     /* Модальное окно */
+     .cabinet-modal {
+          width: 90%;
+          /* Уменьшаем ширину до 90% экрана */
+          padding: 15px;
+          border-radius: 10px;
+     }
+
+     .cabinet-modal h2 {
+          font-size: 16px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 8px;
+     }
+
+     .cabinet-modal-content {
+          padding-right: 5px;
+          /* Уменьшаем отступ для скролла */
+     }
+
+     .modal-subtitle {
+          font-size: 14px;
+          /* Уменьшаем подзаголовок */
+     }
+
+     .modal-description {
+          font-size: 13px;
+          /* Уменьшаем описание */
+          margin-bottom: 12px;
+     }
+
+     .modal-phone-input input {
+          padding: 12px;
+          /* Уменьшаем инпут */
+          font-size: 13px;
+          border-radius: 6px;
+     }
+
+     .modal-continue-button,
+     .modal-sber-id-button,
+     .modal-other-ways-button {
+          padding: 10px 16px;
+          /* Уменьшаем кнопки */
+          font-size: 14px;
+          border-radius: 6px;
+     }
+
+     .modal-sber-id-button>svg {
+          font-size: 20px;
+     }
+
+     .modal-sber-card {
+          height: 80px;
+          /* Уменьшаем высоту карточки */
+          padding: 5px;
+     }
+
+     .modal-sber-id-description {
+          font-size: 11px;
+          /* Уменьшаем текст */
+          margin-bottom: 12px;
+     }
+
+     .modal-footer {
+          font-size: 11px;
+          margin-left: 0;
+          /* Убираем отрицательный отступ */
+     }
+
+     .cabinet-close {
+          top: 8px;
+          right: 8px;
+          font-size: 18px;
+          /* Уменьшаем иконку закрытия */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .cabinet__avatar {
+          font-size: 60px !important;
+          /* Еще сильнее уменьшаем аватар */
+     }
+
+     .cabinet__title {
+          font-size: 16px;
+     }
+
+     .cabinet__subtitle {
+          font-size: 12px;
+          margin-bottom: 12px;
+     }
+
+     .cabinet__button {
+          padding: 12px 16px;
+          font-size: 14px;
+          border-radius: 8px;
+     }
+
+     .cabinet__theme {
+          height: 45px;
+          padding: 6px;
+          border-radius: 12px;
+     }
+
+     .cabinet__theme span {
+          font-size: 12px;
+     }
+
+     .toggle-switch {
+          width: 45px;
+          height: 26px;
+     }
+
+     .slider {
+          border-radius: 26px;
+     }
+
+     .slider:before {
+          height: 20px;
+          width: 20px;
+          left: 2px;
+          bottom: 3px;
+     }
+
+     input:checked+.slider:before {
+          transform: translateX(12px);
+     }
+
+     .promo__text {
+          font-size: 13px;
+     }
+
+     .promo__discount {
+          font-size: 11px;
+          margin-top: 6px;
+     }
+
+     .promo__code__qr {
+          width: 45px;
+          height: 45px;
+     }
+
+     .promo__code {
+          padding: 5px;
+     }
+
+     .search__prome__key__icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+     }
+
+     /* Модальное окно */
+     .cabinet-modal {
+          width: 95%;
+          /* Еще больше увеличиваем ширину */
+          padding: 12px;
+     }
+
+     .cabinet-modal h2 {
+          font-size: 14px;
+     }
+
+     .modal-subtitle {
+          font-size: 13px;
+     }
+
+     .modal-description {
+          font-size: 12px;
+     }
+
+     .modal-phone-input input {
+          padding: 10px;
+          font-size: 12px;
+     }
+
+     .modal-continue-button,
+     .modal-sber-id-button,
+     .modal-other-ways-button {
+          padding: 8px 12px;
+          font-size: 13px;
+     }
+
+     .modal-sber-id-button>svg {
+          font-size: 18px;
+     }
+
+     .modal-sber-card {
+          height: 70px;
+     }
+
+     .modal-sber-id-description {
+          font-size: 10px;
+     }
+
+     .modal-footer {
+          font-size: 10px;
+     }
+
+     .cabinet-close {
+          font-size: 16px;
+     }
+}

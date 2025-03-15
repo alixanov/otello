@@ -10,29 +10,25 @@
      justify-content: center;
      z-index: 1000;
 }
+
 .bonuses__modal {
      background: var(--background-color-search);
      width: 400px;
      max-height: 80vh;
-     /* Ограничиваем высоту модального окна */
      padding: 20px;
      border-radius: 12px;
      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
      text-align: center;
      position: relative;
      overflow: hidden;
-     /* Скрываем выходящий за пределы контент */
      display: flex;
      flex-direction: column;
 }
 
 .bonuses-modal-content {
      overflow-y: auto;
-     /* Добавляем вертикальный скролл */
      max-height: calc(80vh - 60px);
-     /* Ограничиваем высоту, чтобы учесть заголовок и кнопку закрытия */
      padding-right: 10px;
-     /* Отступ для скролла */
 }
 
 /* Стилизация скролла */
@@ -48,6 +44,7 @@
 .bonuses-modal-content::-webkit-scrollbar-track {
      background: #f1f1f1;
 }
+
 .bonuses__close {
      position: absolute;
      top: 10px;
@@ -87,15 +84,14 @@
      font-weight: bold;
      margin-bottom: 5px;
      border: solid 2px var(--black-color);
-     border-top-left-radius: 22px;
-               border-top-left-radius: 18px;
-          border-top-right-radius: 12px;
-                    border-bottom-right-radius: 12px;
+     border-top-left-radius: 18px;
+     border-top-right-radius: 12px;
+     border-bottom-right-radius: 12px;
 }
 
-
-.bonuses__logo > span {
-     color: var(--black-color);}
+.bonuses__logo>span {
+     color: var(--black-color);
+}
 
 .bonuses__subtitle {
      font-size: 16px;
@@ -107,7 +103,7 @@
 .bonuses__text {
      font-size: 14px;
      color: var(--black-color);
-margin-top: 10px;
+     margin-top: 10px;
 }
 
 .bonuses__list {
@@ -136,12 +132,13 @@ margin-top: 10px;
 .bonuses__list p {
      font-size: 12px;
      color: var(--text-color);
-           margin: 5px 0 0;
+     margin: 5px 0 0;
 }
 
 .bonuses__link {
      font-size: 12px;
-     color: var(--text-color);        margin-bottom: 15px;
+     color: var(--text-color);
+     margin-bottom: 15px;
 }
 
 .bonuses__link a {
@@ -150,8 +147,8 @@ margin-top: 10px;
 }
 
 .bonuses__button {
-     background: var(--black-color);;
-     color: var(--text-color);
+     background: var(--black-color);
+     color: var(--white-color);
      border: none;
      padding: 10px 20px;
      border-radius: 6px;
@@ -168,4 +165,159 @@ margin-top: 10px;
 
 .bonuses__button svg {
      margin-right: 5px;
+}
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .bonuses__modal {
+          width: 90%;
+          /* Уменьшаем ширину до 90% экрана */
+          padding: 15px;
+          /* Уменьшаем внутренние отступы */
+          border-radius: 10px;
+          /* Скругляем углы чуть меньше */
+          max-height: 85vh;
+          /* Увеличиваем максимальную высоту */
+     }
+
+     .bonuses-modal-content {
+          max-height: calc(85vh - 50px);
+          /* Корректируем высоту контента */
+          padding-right: 5px;
+          /* Уменьшаем отступ для скролла */
+     }
+
+     .bonuses__close {
+          top: 8px;
+          right: 8px;
+          font-size: 18px;
+          /* Уменьшаем иконку закрытия */
+     }
+
+     .bonuses__title {
+          font-size: 16px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 8px;
+     }
+
+     .bonuses__header {
+          padding: 12px;
+          /* Уменьшаем отступы */
+          border-radius: 6px;
+          margin-bottom: 15px;
+     }
+
+     .bonuses__logo {
+          width: 120px;
+          /* Уменьшаем логотип */
+          height: 30px;
+          font-size: 14px;
+          /* Уменьшаем шрифт логотипа */
+          border-top-left-radius: 16px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+     }
+
+     .bonuses__subtitle {
+          font-size: 14px;
+          /* Уменьшаем подзаголовок */
+          margin-top: 8px;
+     }
+
+     .bonuses__text {
+          font-size: 12px;
+          /* Уменьшаем текст */
+          margin-top: 8px;
+     }
+
+     .bonuses__list li {
+          margin-bottom: 8px;
+          /* Уменьшаем расстояние между элементами списка */
+     }
+
+     .bonuses__list strong {
+          font-size: 14px;
+          /* Уменьшаем заголовки пунктов */
+     }
+
+     .bonuses__list p {
+          font-size: 11px;
+          /* Уменьшаем текст пунктов */
+          margin-top: 3px;
+     }
+
+     .bonuses__link {
+          font-size: 11px;
+          /* Уменьшаем текст ссылки */
+          margin-bottom: 12px;
+     }
+
+     .bonuses__button {
+          padding: 8px 16px;
+          /* Уменьшаем кнопку */
+          font-size: 13px;
+          /* Уменьшаем шрифт кнопки */
+          border-radius: 5px;
+          margin-top: 8px;
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .bonuses__modal {
+          width: 95%;
+          /* Еще больше увеличиваем ширину */
+          padding: 12px;
+     }
+
+     .bonuses-modal-content {
+          max-height: calc(85vh - 40px);
+     }
+
+     .bonuses__close {
+          font-size: 16px;
+     }
+
+     .bonuses__title {
+          font-size: 14px;
+          margin-bottom: 6px;
+     }
+
+     .bonuses__header {
+          padding: 10px;
+     }
+
+     .bonuses__logo {
+          width: 100px;
+          height: 28px;
+          font-size: 13px;
+          border-top-left-radius: 14px;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+     }
+
+     .bonuses__subtitle {
+          font-size: 13px;
+     }
+
+     .bonuses__text {
+          font-size: 11px;
+     }
+
+     .bonuses__list strong {
+          font-size: 13px;
+     }
+
+     .bonuses__list p {
+          font-size: 10px;
+     }
+
+     .bonuses__link {
+          font-size: 10px;
+     }
+
+     .bonuses__button {
+          padding: 6px 12px;
+          font-size: 12px;
+     }
 }

@@ -9,67 +9,74 @@
      top: 0;
      box-shadow: 0 .5px .5px rgba(0, 0, 0, 0.1);
      z-index: 1000;
-     /* Добавлено для тени */
-          padding: 12px 70px;
+     padding: 12px 70px;
 }
-
 
 .nav__logo {
      display: flex;
-     align-items:start;
-     justify-content:start;
+     align-items: center;
+     justify-content: start;
 }
-.nav__logo > svg {
-     color:var(--text-color);
+
+.nav__logo>svg {
+     color: var(--text-color);
      font-size: 43px;
      margin-top: 2px;
 }
 
-.nav__logo > h1 {
+.nav__logo>h1 {
      color: var(--text-color);
      font-size: 33px;
      font-weight: bold;
      font-family: "Montserrat-Bold";
 }
+
 .nav__a__links {
      display: flex;
      align-items: center;
      justify-content: center;
      gap: 5px;
 }
+
 .nav__a__link {
      width: 150px;
-          height: 45px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-     color: var(--text-color);          font-size: 17px;
-          border-radius: 12px;
-          transition: .5s ease;
-          gap: 5px;
-          font-weight: 400;
+     height: 45px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--text-color);
+     font-size: 17px;
+     border-radius: 12px;
+     transition: .5s ease;
+     gap: 5px;
+     font-weight: 400;
 }
-.nav__a__link > svg ,.nav__a__link__user > svg {
+
+.nav__a__link>svg,
+.nav__a__link__user>svg {
      font-size: 26px;
-     color: var(--text-color);}
+     color: var(--text-color);
+}
+
 .nav__a__link:hover {
      background-color: var(--hover--nav);
-     
 }
+
 .nav__a__link__user {
-          width: 45px;
-     height: 45px;     display: flex;
+     width: 45px;
+     height: 45px;
+     display: flex;
      align-items: center;
      justify-content: center;
      border: solid .5px var(--hover--nav);
-          border-radius: 12px;}
-
+     border-radius: 12px;
+}
 
 .nav__a__link__sale {
      display: flex;
      align-items: center;
      width: 140px;
-          height: 45px;
+     height: 45px;
      font-size: 16px;
      font-weight: bold;
      color: #ffffff;
@@ -84,8 +91,6 @@
      transition: background 0.3s ease, box-shadow 0.3s ease;
      gap: 10px;
 }
-
-
 
 .nav__a__link__sale:hover {
      background: linear-gradient(90deg, #28a745 0%, #007bff 100%);
@@ -102,18 +107,79 @@
      display: flex;
      align-items: center;
      justify-content: center;
-          border-top-right-radius: 50px;
-               border-bottom-right-radius: 50px;
-               border-top-left-radius: 50px;
-               background-color: white;
-                    color:rgb(36, 163, 123) ;
-                    font-size: 19px;
-                    font-weight: bold;
-               
+     border-top-right-radius: 50px;
+     border-bottom-right-radius: 50px;
+     border-top-left-radius: 50px;
+     background-color: white;
+     color: rgb(36, 163, 123);
+     font-size: 19px;
+     font-weight: bold;
 }
 
 /* Стиль для активной ссылки */
 .nav__a__link.active {
      background-color: var(--active-nav);
+}
 
+/* Мобильное меню */
+.mobile-menu-icon {
+     display: none;
+     cursor: pointer;
+}
+
+.mobile-menu-overlay {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 999;
+}
+
+@media (max-width: 989px) {
+
+     .nav__container {
+
+          padding: 7px 20px;
+     }}
+
+@media (max-width: 768px) {
+
+     .nav__container {
+           
+               padding: 7px 20px;
+          }
+
+     .nav__a__links {
+          position: fixed;
+          top: 0;
+          right: -200px;
+          width: 200px;
+          height: 100%;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+          background-color: var(--background-color-search);
+          transition: right 0.3s ease;
+               padding: 20px 10px;
+          z-index: 1000;
+     }
+            .nav__a__link {
+               justify-content: start;
+               padding: 3px;
+            }
+
+     .nav__a__links.open {
+          right: 0;
+     }
+
+     .mobile-menu-icon {
+          display: block;
+     }
+
+     .mobile-menu-overlay {
+          display: block;
+     }
 }

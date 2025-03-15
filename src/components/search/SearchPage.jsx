@@ -11,6 +11,9 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Для навигации между страницами
 import "./search-page.css";
 
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
+
 const Search = () => {
   const [isCalendarOpen, setCalendarOpen] = useState(false);
   const [isLocationModalOpen, setLocationModalOpen] = useState(false);
@@ -78,13 +81,20 @@ const Search = () => {
     setChildren(0);
     setGuestsText('2 взрослых');
   };
-
   const handleSearchClick = () => {
     if (selectedProduct) {
       // Переход на страницу с информацией об отеле по ID отеля
       navigate(`/hotel/${selectedProduct._id}`);
     } else {
-      alert('Пожалуйста, выберите место для поиска.');
+      Toastify({
+        text: "Пожалуйста, выберите место для поиска.",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` или `bottom`
+        position: "center", // `left`, `center` или `right`
+        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        stopOnFocus: true, // Останавливает таймер при наведении
+      }).showToast();
     }
   };
 

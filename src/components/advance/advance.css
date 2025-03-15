@@ -1,14 +1,10 @@
 .advance__video {
      position: relative;
-     /* Добавлено для контейнера видео */
      width: 100%;
-     /* Устанавливаем ширину для контейнера */
      min-width: 600px;
-     /* Максимальная ширина, если нужно */
      margin: 0 auto;
-     /* Центрируем контейнер */
 }
- 
+
 .advance__video>video {
      width: 100%;
      border-radius: 12px;
@@ -22,26 +18,92 @@
      width: 100%;
      height: 99%;
      background: rgba(0, 0, 0, 0.3);
-     /* Полупрозрачный черный фон */
      border-radius: 12px;
-     /* Скругленные углы для overlay */
 }
 
 .advance__txt {
      position: absolute;
      top: 15%;
-     /* Центрирование по вертикали */
      left: 35%;
-     /* Центрирование по горизонтали */
      transform: translate(-50%, -50%);
      border-radius: 12px;
-     /* Скругленные углы */
 }
 
 .advance__txt>h1 {
      color: var(--white-color);
-     /* Цвет текста белый */
      text-align: start;
-     /* Центрирование текста */
      font-family: "Montserrat-Bold";
+}
+
+/* Переработанный медиа-запрос для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .advance__video {
+          min-width: 0;
+          /* Убираем минимальную ширину для полной адаптивности */
+          margin: 0 10px;
+          /* Добавляем небольшие боковые отступы */
+     }
+
+     .advance__video>video {
+          border-radius: 10px;
+          /* Уменьшаем радиус углов для эстетики */
+          opacity: 1;
+          /* Убираем прозрачность для лучшей видимости на маленьких экранах */
+     }
+
+     .advance__overlay {
+          height: 100%;
+          /* Полное покрытие видео */
+          border-radius: 10px;
+          /* Синхронизируем с видео */
+          background: rgba(0, 0, 0, 0.4);
+          /* Чуть темнее для контраста текста */
+     }
+
+     .advance__txt {
+          top: 50%;
+          /* Перемещаем текст ближе к центру по вертикали */
+          left: 50%;
+          /* Центрируем по горизонтали */
+          transform: translate(-50%, -50%);
+          /* Точное центрирование */
+          width: 90%;
+          /* Ограничиваем ширину текста */
+          text-align: center;
+          /* Центрируем текст внутри блока */
+     }
+
+     .advance__txt>h1 {
+          font-size: 20px;
+          /* Уменьшаем шрифт для компактности */
+          text-align: center;
+          /* Центрируем текст заголовка */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .advance__video {
+          margin: 0 5px;
+          /* Уменьшаем боковые отступы */
+     }
+
+     .advance__video>video {
+          border-radius: 8px;
+          /* Еще меньше радиус углов */
+     }
+
+     .advance__overlay {
+          border-radius: 8px;
+     }
+
+     .advance__txt {
+          width: 85%;
+          /* Еще сильнее ограничиваем ширину текста */
+     }
+
+     .advance__txt>h1 {
+          font-size: 16px;
+          /* Еще меньше шрифт для маленьких экранов */
+     }
 }
