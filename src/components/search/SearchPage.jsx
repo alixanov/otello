@@ -8,11 +8,8 @@ import GroupIcon from '@mui/icons-material/Group';
 import KeyIcon from '@mui/icons-material/Key';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Для навигации между страницами
+import { useNavigate } from 'react-router-dom';
 import "./search-page.css";
-
-import Toastify from 'toastify-js';
-import "toastify-js/src/toastify.css";
 
 const Search = () => {
   const [isCalendarOpen, setCalendarOpen] = useState(false);
@@ -27,8 +24,9 @@ const Search = () => {
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [guestsText, setGuestsText] = useState('2 взрослых');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const navigate = useNavigate(); // Хук для навигации
+  const navigate = useNavigate();
 
   const handleDateChange = (dates) => {
     const [start, end] = dates;
@@ -61,6 +59,7 @@ const Search = () => {
     setSelectedProduct(product);
     setSearchText(product.nomi);
     setLocationModalOpen(false);
+    setErrorMessage(''); // Сброс ошибки при выборе отеля
   };
 
   const updateGuestsText = () => {
@@ -81,20 +80,16 @@ const Search = () => {
     setChildren(0);
     setGuestsText('2 взрослых');
   };
+
   const handleSearchClick = () => {
     if (selectedProduct) {
-      // Переход на страницу с информацией об отеле по ID отеля
       navigate(`/hotel/${selectedProduct._id}`);
     } else {
-      Toastify({
-        text: "Пожалуйста, выберите место для поиска.",
-        duration: 3000,
-        close: true,
-        gravity: "top", // `top` или `bottom`
-        position: "center", // `left`, `center` или `right`
-        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
-        stopOnFocus: true, // Останавливает таймер при наведении
-      }).showToast();
+      setErrorMessage('Пожалуйста, выберите место для поиска.');
+      // Сброс ошибки через 2 секунды
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 2000);
     }
   };
 
@@ -149,7 +144,9 @@ const Search = () => {
             readOnly
           />
         </div>
-        <button className='search__button' onClick={handleSearchClick}>Найти</button>
+        <button className='search__button' onClick={handleSearchClick}>
+          {errorMessage ? errorMessage : 'Найти'}
+        </button>
       </div>
 
       {isCalendarOpen && (
@@ -283,7 +280,6 @@ const Search = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
