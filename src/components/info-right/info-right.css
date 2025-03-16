@@ -16,7 +16,7 @@
      justify-content: start;
      flex-direction: column;
      gap: 20px;
-     background-color:var(--background-color-search);
+     background-color: var(--background-color-search);
      box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
      padding: 15px;
      border-radius: 22px;
@@ -50,13 +50,13 @@
 
 .info__right__box__txt>p {
      font-size: 16px;
-     color:var(--text-color);
+     color: var(--text-color);
      font-weight: 600;
 }
 
 .info__right__box__txt>span {
      font-size: 14px;
-     color:var(--gray-color);
+     color: var(--gray-color);
      font-weight: 400;
 }
 
@@ -75,7 +75,7 @@
 .info__right__txt>a {
      width: 180px;
      height: 38px;
-     color:var(--text-color);
+     color: var(--text-color);
      font-size: 17px;
      border-radius: 12px;
      display: flex;
@@ -86,20 +86,15 @@
 }
 
 .info__right__txt>a:hover {
-     background-color:var(--info-card-btn-color);
+     background-color: var(--info-card-btn-color);
      color: var(--black-color);
 }
-
 
 .info__right__txt>a:nth-child(5) {
      width: 270px;
      height: 38px;
 }
 
-.info__right__txt>a:hover {
-background-color: var(--info-card-btn-color);
-     color: var(--black-color);
-}
 /* Стили для модального окна */
 .custom-modal {
      display: flex;
@@ -181,7 +176,7 @@ background-color: var(--info-card-btn-color);
 .guest-info p {
      font-size: 14px;
      color: var(--gray-color);
-          margin: 0;
+     margin: 0;
 }
 
 .guest-counter {
@@ -202,6 +197,7 @@ background-color: var(--info-card-btn-color);
      font-size: 18px;
      transition: all .5s ease;
 }
+
 .counter-btn:hover {
      background-color: var(--info-card-btn-color-hover);
 }
@@ -237,8 +233,11 @@ background-color: var(--info-card-btn-color);
      flex-grow: 1;
      transition: all .5s ease;
 }
+
 .apply-button:hover {
-     background-color: #4fb71b; }
+     background-color: #4fb71b;
+}
+
 .clear-button {
      background-color: var(--info-card-btn-color);
      color: var(--black-color);
@@ -249,11 +248,13 @@ background-color: var(--info-card-btn-color);
      font-weight: 500;
      font-size: 16px;
      margin-right: 10px;
-          transition: all .5s ease;
+     transition: all .5s ease;
 }
+
 .clear-button:hover {
      background-color: var(--info-card-btn-color-hover);
 }
+
 /* Стили для календаря */
 .calendar-modal {
      position: fixed;
@@ -299,3 +300,290 @@ background-color: var(--info-card-btn-color);
      justify-content: center;
 }
 
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .info__right__container {
+          max-width: 100%;
+          /* Растягиваем контейнер на всю ширину */
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
+
+     .info__right__card {
+          padding: 12px;
+          /* Уменьшаем внутренние отступы */
+          gap: 15px;
+          /* Уменьшаем расстояние между элементами */
+          border-radius: 16px;
+          /* Уменьшаем радиус углов */
+     }
+
+     .info__right__box {
+          padding: 5px 5px 10px 5px;
+          /* Уменьшаем нижний отступ */
+          gap: 8px;
+          /* Уменьшаем расстояние между иконкой и текстом */
+     }
+
+     .info__right__box .icon {
+          font-size: 22px;
+          /* Уменьшаем иконку */
+          width: 20px;
+          height: 20px;
+     }
+
+     .info__right__box__txt>p {
+          font-size: 14px;
+          /* Уменьшаем основной текст */
+     }
+
+     .info__right__box__txt>span {
+          font-size: 13px;
+          /* Уменьшаем дополнительный текст */
+     }
+
+     .info__right__txt {
+          margin-top: 15px;
+          /* Уменьшаем верхний отступ */
+          gap: 8px;
+          /* Уменьшаем расстояние между ссылками */
+     }
+
+     .info__right__txt>a {
+          width: 100%;
+          /* Растягиваем ссылки на всю ширину */
+          height: 36px;
+          font-size: 15px;
+          /* Уменьшаем шрифт */
+          border-radius: 10px;
+          padding: 8px;
+          /* Увеличиваем внутренний отступ для удобства */
+     }
+
+     .info__right__txt>a:nth-child(5) {
+          width: 100%;
+          /* Убираем фиксированную ширину */
+          height: 36px;
+     }
+
+     .custom-modal-content {
+          max-width: 90%;
+          /* Уменьшаем ширину модального окна */
+          border-radius: 10px;
+     }
+
+     .modal-header {
+          padding: 15px;
+          /* Уменьшаем отступы */
+     }
+
+     .modal-header h2 {
+          font-size: 16px;
+          /* Уменьшаем заголовок */
+     }
+
+     .close-button {
+          width: 28px;
+          height: 28px;
+          font-size: 14px;
+          /* Уменьшаем иконку закрытия */
+          right: 15px;
+     }
+
+     .guests-container {
+          padding: 15px;
+          /* Уменьшаем отступы */
+     }
+
+     .guest-type {
+          margin-bottom: 15px;
+          /* Уменьшаем расстояние между типами гостей */
+     }
+
+     .guest-info h3 {
+          font-size: 14px;
+          /* Уменьшаем заголовок */
+     }
+
+     .guest-info p {
+          font-size: 12px;
+          /* Уменьшаем текст */
+     }
+
+     .counter-btn {
+          width: 28px;
+          height: 28px;
+          font-size: 16px;
+          /* Уменьшаем кнопки */
+     }
+
+     .counter-value {
+          margin: 0 10px;
+          /* Уменьшаем отступы */
+          font-size: 14px;
+     }
+
+     .modal-footer {
+          padding: 10px 15px;
+          /* Уменьшаем отступы */
+     }
+
+     .apply-button,
+     .clear-button {
+          padding: 10px 16px;
+          /* Уменьшаем кнопки */
+          font-size: 14px;
+          border-radius: 6px;
+     }
+
+     .clear-button {
+          margin-right: 8px;
+          /* Уменьшаем отступ между кнопками */
+     }
+
+     .calendar-modal-content {
+          padding: 12px;
+          /* Уменьшаем отступы */
+          border-radius: 18px;
+          max-width: 90%;
+          /* Уменьшаем ширину */
+     }
+
+     .calendar-modal-content h3 {
+          font-size: 20px;
+          /* Уменьшаем заголовок */
+          margin-bottom: 15px;
+     }
+
+     .calendar-modal-close {
+          right: 15px;
+          top: 15px;
+          width: 32px;
+          height: 32px;
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .info__right__container {
+          padding: 0 8px;
+          /* Уменьшаем боковые отступы */
+     }
+
+     .info__right__card {
+                    width: 330px;
+          padding: 10px;
+          gap: 12px;
+          border-radius: 12px;
+     }
+
+     .info__right__box {
+          padding: 5px 5px 8px 5px;
+          gap: 6px;
+     }
+
+     .info__right__box .icon {
+          font-size: 20px;
+          width: 18px;
+          height: 18px;
+     }
+
+     .info__right__box__txt>p {
+          font-size: 13px;
+     }
+
+     .info__right__box__txt>span {
+          font-size: 12px;
+     }
+
+     .info__right__txt {
+          margin-top: 12px;
+          gap: 6px;
+     }
+
+     .info__right__txt>a {
+          height: 34px;
+          font-size: 14px;
+          border-radius: 8px;
+          padding: 6px;
+     }
+
+     .custom-modal-content {
+          max-width: 95%;
+          /* Еще больше уменьшаем ширину */
+     }
+
+     .modal-header {
+          padding: 12px;
+     }
+
+     .modal-header h2 {
+          font-size: 14px;
+     }
+
+     .close-button {
+          width: 24px;
+          height: 24px;
+          font-size: 12px;
+          right: 12px;
+     }
+
+     .guests-container {
+          padding: 12px;
+     }
+
+     .guest-type {
+          margin-bottom: 12px;
+     }
+
+     .guest-info h3 {
+          font-size: 13px;
+     }
+
+     .guest-info p {
+          font-size: 11px;
+     }
+
+     .counter-btn {
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+     }
+
+     .counter-value {
+          margin: 0 8px;
+          font-size: 13px;
+     }
+
+     .modal-footer {
+          padding: 8px 12px;
+     }
+
+     .apply-button,
+     .clear-button {
+          padding: 8px 12px;
+          font-size: 13px;
+          border-radius: 5px;
+     }
+
+     .clear-button {
+          margin-right: 6px;
+     }
+
+     .calendar-modal-content {
+          padding: 10px;
+          border-radius: 14px;
+     }
+
+     .calendar-modal-content h3 {
+          font-size: 18px;
+          margin-bottom: 12px;
+     }
+
+     .calendar-modal-close {
+          right: 12px;
+          top: 12px;
+          width: 28px;
+          height: 28px;
+     }
+}

@@ -13,7 +13,6 @@
      margin-bottom: 20px;
 }
 
-
 .hotels__cards__wrapper {
      width: 100%;
      display: flex;
@@ -76,7 +75,7 @@
      border-radius: 5px;
      border: none;
      font-size: 15px;
-     color:var(--black-color);
+     color: var(--black-color);
      font-weight: 400;
      cursor: pointer;
 }
@@ -97,7 +96,7 @@
 .hotels__rating {
      max-width: 100px;
      height: 26px;
-     background-color:var(--rating-color);
+     background-color: var(--rating-color);
      color: gold;
      font-size: 13px;
      display: flex;
@@ -110,13 +109,14 @@
 .hotels__location,
 .hotels__dates,
 .hotels__adults {
-     color:var(--text-color);
+     color: var(--text-color);
      font-size: 14px;
      font-weight: 400;
 }
 
 .hotels__price {
-     color: var(--light-green-color);     font-size: 14px;
+     color: var(--light-green-color);
+     font-size: 14px;
      font-weight: 600;
 }
 
@@ -133,7 +133,8 @@
 }
 
 .hotels__star__title>p {
-     color: var(--light-green-color);     font-size: 14px;
+     color: var(--light-green-color);
+     font-size: 14px;
      margin-top: 5px;
 }
 
@@ -141,4 +142,189 @@
      color: var(--light-green-color);
      font-size: 18px;
      margin-top: 15px;
+}
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .hotels__container {
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
+
+     .hotels__cards {
+          gap: 15px;
+          /* Уменьшаем расстояние между карточками */
+          justify-content: center;
+          /* Центрируем карточки */
+     }
+
+     .hotels__card {
+          width: calc(50% - 8px);
+          /* Две карточки в ряд с учетом gap */
+          border-radius: 10px;
+          /* Уменьшаем радиус углов */
+          margin-top: 8px;
+     }
+
+     .hotels__image {
+          height: 160px;
+          /* Уменьшаем высоту изображения */
+          border-radius: 10px;
+     }
+
+     .hotels__discount {
+          top: 8px;
+          left: 8px;
+          padding: 2px 5px;
+          border-radius: 4px;
+     }
+
+     .hotels__discount>svg {
+          width: 18px;
+          /* Уменьшаем иконку */
+     }
+
+     .hotels__discount>button {
+          padding: 2px 12px;
+          font-size: 13px;
+          /* Уменьшаем шрифт скидки */
+          border-radius: 4px;
+     }
+
+     .hotels__info {
+          gap: 1px;
+          /* Уменьшаем расстояние между элементами информации */
+          margin-top: 8px;
+     }
+
+     .hotels__name {
+          font-size: 16px;
+          /* Уменьшаем заголовок */
+     }
+
+     .hotels__rating {
+          height: 24px;
+          font-size: 12px;
+          /* Уменьшаем рейтинг */
+          border-radius: 6px;
+     }
+
+     .hotels__reviews,
+     .hotels__location,
+     .hotels__dates,
+     .hotels__adults {
+          font-size: 13px;
+          /* Уменьшаем текст */
+     }
+
+     .hotels__price {
+          font-size: 13px;
+     }
+
+     .hotels__favorites__icon {
+          top: 8px;
+          right: 8px;
+     }
+
+     .hotels__favorites__icon>svg {
+          font-size: 24px;
+          /* Уменьшаем иконку избранного */
+     }
+
+     .hotels__star__title>h2 {
+          font-size: 16px;
+          /* Уменьшаем заголовок категории */
+          margin-top: 12px;
+     }
+
+     .hotels__star__title>p {
+          font-size: 13px;
+          margin-top: 4px;
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .hotels__container {
+          padding: 0 8px;
+          /* Уменьшаем боковые отступы */
+     }
+
+     .hotels__cards {
+          gap: 10px;
+          /* Еще меньше расстояние между карточками */
+     }
+
+     .hotels__card {
+          width: 100%;
+          /* Одна карточка в ряд */
+          border-radius: 8px;
+          margin-top: 6px;
+     }
+
+     .hotels__image {
+          height: 140px;
+          /* Еще меньше высота изображения */
+          border-radius: 8px;
+     }
+
+     .hotels__discount {
+          top: 6px;
+          left: 6px;
+          padding: 2px 4px;
+     }
+
+     .hotels__discount>svg {
+          width: 16px;
+     }
+
+     .hotels__discount>button {
+          padding: 2px 10px;
+          font-size: 12px;
+          border-radius: 3px;
+     }
+
+     .hotels__info {
+          margin-top: 6px;
+     }
+
+     .hotels__name {
+          font-size: 15px;
+     }
+
+     .hotels__rating {
+          height: 22px;
+          font-size: 11px;
+          border-radius: 5px;
+     }
+
+     .hotels__reviews,
+     .hotels__location,
+     .hotels__dates,
+     .hotels__adults {
+          font-size: 12px;
+     }
+
+     .hotels__price {
+          font-size: 12px;
+     }
+
+     .hotels__favorites__icon {
+          top: 6px;
+          right: 6px;
+     }
+
+     .hotels__favorites__icon>svg {
+          font-size: 22px;
+     }
+
+     .hotels__star__title>h2 {
+          font-size: 15px;
+          margin-top: 10px;
+     }
+
+     .hotels__star__title>p {
+          font-size: 12px;
+          margin-top: 3px;
+     }
 }

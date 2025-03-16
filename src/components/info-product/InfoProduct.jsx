@@ -211,6 +211,12 @@ const InfoProduct = () => {
         <p className="hotel-description">{hotel.malumoti || 'Информация о отеле отсутствует'}</p>
         <button>Подробнее</button>
       </div>
+
+
+      <div className="hotel__info__images__right-bottom">
+        <InfoRight hotel={hotel} />
+      </div>
+
     </div>
   );
 };

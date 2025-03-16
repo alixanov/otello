@@ -15,7 +15,6 @@
      margin-bottom: 20px;
 }
 
-
 .hotel__info__nav {
      width: 100%;
      display: flex;
@@ -33,7 +32,7 @@
      align-items: center;
      justify-content: center;
      color: var(--black-color);
-     background-color:var(--info-card-btn-color);
+     background-color: var(--info-card-btn-color);
      transition: .5s ease;
 }
 
@@ -64,7 +63,6 @@
      color: var(--black-color);
      background-color: var(--info-card-btn-color);
      transition: .5s ease;
-     
 }
 
 .hotel__info__nav__btn>a:hover {
@@ -75,7 +73,6 @@
      color: var(--black-color);
      font-size: 25px;
 }
-
 
 .hotel__info__nav__btn>a:nth-child(2) {
      width: 270px;
@@ -90,9 +87,8 @@
 }
 
 .hotel__info__nav__btn>a:nth-child(2):hover {
-     background-color:var(--info-card-btn-color-hover);
+     background-color: var(--info-card-btn-color-hover);
 }
-
 
 .hotel__info__images {
      width: 100%;
@@ -128,10 +124,7 @@
      display: flex;
      align-items: start;
      flex-direction: column;
-
 }
-
-
 
 .hotel-stars {
      padding: 4px;
@@ -161,8 +154,6 @@
      margin: 10px 0;
 }
 
-
-
 .hotel-amenities {
      display: flex;
      flex-wrap: wrap;
@@ -177,8 +168,7 @@
      background-color: var(--info-card-btn-color);
      border-radius: 8px;
      border: solid 1px var(--slider-color);
-     /* cursor: pointer; */
-          color: var(--black-color);
+     color: var(--black-color);
 }
 
 .amenity svg {
@@ -190,21 +180,21 @@
      display: flex;
      align-items: center;
      padding: 6px;
-     background-color: var(--info-card-btn-color);     border-radius: 8px;
+     background-color: var(--info-card-btn-color);
+     border-radius: 8px;
      cursor: pointer;
      border: solid 1px var(--slider-color);
      color: var(--black-color);
 }
 
 .amenity__more__detail:hover {
-     background-color:var(--info-card-btn-color-hover);
+     background-color: var(--info-card-btn-color-hover);
 }
 
 .amenity__more__detail>svg {
      margin-right: 8px;
      color: var(--black-color);
 }
-
 
 .hotel__map__title {
      color: var(--text-color);
@@ -225,7 +215,8 @@
 
 .hotel__info__detail {
      width: 700px;
-     background-color: var(--background-color-search);     display: flex;
+     background-color: var(--background-color-search);
+     display: flex;
      align-items: start;
      justify-content: space-between;
      flex-direction: column;
@@ -257,43 +248,276 @@
      border: none;
      font-weight: 600;
      cursor: pointer;
-
 }
 
 .hotel__info__detail>button:hover {
      background-color: var(--info-card-btn-color-hover);
 }
 
-/* Медиазапросы для адаптивности */
-@media (max-width: 768px) {
-     .hotel-header {
-          flex-direction: column;
-          align-items: flex-start;
-     }
 
-     .hotel-images {
-          grid-template-columns: 1fr 1fr;
-     }
+.hotel__info__images__right-bottom {
+     display: none;
 }
 
-@media (max-width: 480px) {
+/* Переработанные медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .hotel__info__images__right {
+display: none;
+     }
+          .hotel__info__images__right-bottom {
+               display: block;
+               margin-top: 20px;
+          }
+     .hotel-info {
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
+
+     .hotel-header {
+          margin-bottom: 15px;
+          /* Уменьшаем отступ снизу */
+     }
+
+     .hotel__info__nav {
+          flex-direction: column;
+          /* Вертикальное расположение навигации */
+          gap: 10px;
+          padding: 10px 0;
+     }
+
+     .hotel__info__nav>a {
+          width: 100%;
+          /* Растягиваем кнопки на всю ширину */
+          height: 38px;
+          font-size: 15px;
+          border-radius: 10px;
+     }
+
+     .hotel__info__nav__btn {
+          flex-direction: column;
+          /* Вертикальное расположение кнопок */
+          width: 100%;
+          gap: 8px;
+     }
+
+     .hotel__info__nav__btn>a {
+          width: 100%;
+          /* Растягиваем кнопки на всю ширину */
+          height: 38px;
+          font-size: 15px;
+          border-radius: 10px;
+     }
+
+     .hotel__info__nav__btn>a:nth-child(2) {
+          width: 100%;
+          /* Убираем фиксированную ширину */
+          height: 38px;
+          font-size: 15px;
+     }
+
+     .hotel__info__images {
+          flex-direction: column;
+          /* Вертикальное расположение изображений */
+          gap: 8px;
+     }
+
+     .hotel__info__images__left,
+     .hotel__info__images__right {
+          width: 100%;
+          /* Растягиваем изображения на всю ширину */
+          height: auto;
+          /* Адаптивная высота */
+     }
+
+     .hotel__info__images__right {
+          height: 300px;
+          /* Уменьшаем высоту правого изображения */
+     }
+
      .hotel-images {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+          /* Две колонки для изображений */
+          gap: 10px;
+     }
+
+     .hotel-image {
+          height: 400px;
+          /* Уменьшаем высоту изображений */
+          border-radius: 6px;
      }
 
      .hotel-title {
-          font-size: 28px;
+          font-size: 22px;
+          /* Уменьшаем заголовок */
      }
 
-     .hotel-reviews {
+     .hotel-stars {
           font-size: 14px;
+          height: 28px;
+          border-radius: 6px;
      }
 
      .hotel-location {
           font-size: 14px;
+          margin: 8px 0;
      }
 
-     .amenity {
+     .hotel-amenities {
+          gap: 8px;
+          margin-bottom: 15px;
+     }
+
+     .amenity,
+     .amenity__more__detail {
+          font-size: 13px;
+          padding: 5px;
+          border-radius: 6px;
+     }
+
+     .amenity svg,
+     .amenity__more__detail>svg {
+          font-size: 18px;
+          /* Уменьшаем иконки */
+     }
+
+     .hotel__map__title {
+          font-size: 20px;
+          /* Уменьшаем заголовок карты */
+          margin-bottom: 5px;
+     }
+
+     .hotel-map {
+          width: 100%;
+          /* Растягиваем карту на всю ширину */
+          margin-top: 15px;
+     }
+
+     .hotel-map iframe {
+          border-radius: 16px;
+          /* Уменьшаем радиус углов */
+          height: 300px;
+          /* Уменьшаем высоту карты */
+     }
+
+     .hotel__info__detail {
+          width: 100%;
+          /* Растягиваем блок на всю ширину */
+          padding: 8px;
+          border-radius: 16px;
+          margin-top: 15px;
+     }
+
+     .hotel-description {
           font-size: 14px;
+          /* Уменьшаем текст описания */
+          margin-top: 8px;
+     }
+
+     .hotel__info__detail>button {
+          width: 100%;
+          /* Растягиваем кнопку на всю ширину */
+          height: 38px;
+          font-size: 15px;
+          border-radius: 10px;
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .hotel-info {
+          padding: 0 8px;
+          /* Уменьшаем боковые отступы */
+     }
+
+     .hotel-header {
+          margin-bottom: 10px;
+     }
+
+     .hotel__info__nav {
+          padding: 8px 0;
+          gap: 8px;
+     }
+
+     .hotel__info__nav>a,
+     .hotel__info__nav__btn>a,
+     .hotel__info__nav__btn>a:nth-child(2) {
+          height: 36px;
+          font-size: 14px;
+          border-radius: 8px;
+     }
+
+     .hotel__info__nav>a>svg,
+     .hotel__info__nav__btn>a>svg {
+          font-size: 20px;
+          /* Уменьшаем иконки */
+     }
+
+     .hotel-images {
+          grid-template-columns: 1fr;
+          /* Одна колонка для изображений */
+          gap: 8px;
+     }
+
+     .hotel-image {
+          height: 350px;
+          /* Еще меньше высота изображений */
+          border-radius: 5px;
+     }
+
+     .hotel__info__images__right {
+          height: 250px;
+          /* Еще меньше высота правого изображения */
+     }
+
+     .hotel-title {
+          font-size: 20px;
+     }
+
+     .hotel-stars {
+          font-size: 13px;
+          height: 26px;
+          margin-top: 8px;
+     }
+
+     .hotel-location {
+          font-size: 13px;
+          margin: 6px 0;
+     }
+
+     .amenity,
+     .amenity__more__detail {
+          font-size: 12px;
+          padding: 4px;
+     }
+
+     .amenity svg,
+     .amenity__more__detail>svg {
+          font-size: 16px;
+     }
+
+     .hotel__map__title {
+          font-size: 18px;
+     }
+
+     .hotel-map iframe {
+          height: 250px;
+          /* Еще меньше высота карты */
+          border-radius: 12px;
+     }
+
+     .hotel__info__detail {
+          padding: 6px;
+          border-radius: 12px;
+          margin-top: 10px;
+     }
+
+     .hotel-description {
+          font-size: 13px;
+     }
+
+     .hotel__info__detail>button {
+          height: 36px;
+          font-size: 14px;
+          border-radius: 8px;
      }
 }

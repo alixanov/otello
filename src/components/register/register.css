@@ -14,7 +14,7 @@
      align-items: start;
      color: white;
      padding: 20px;
-          background-color: var(--light-green-color);
+     background-color: var(--light-green-color);
 }
 
 .register__left h1 {
@@ -22,10 +22,12 @@
      font-weight: bold;
      font-family: "Montserrat-Bold";
 }
+
 .register__left h3 {
      font-size: 22px;
      margin-top: 10px;
 }
+
 .register__left p {
      font-size: 18px;
      margin-top: 10px;
@@ -39,7 +41,7 @@
      justify-content: center;
      align-items: center;
      padding: 20px;
-     background-color:var(--background-color-search);
+     background-color: var(--background-color-search);
 }
 
 .register__buttons {
@@ -61,7 +63,6 @@
      cursor: pointer;
      transition: 0.2s;
      color: var(--black-color);
-
 }
 
 .register__button__start {
@@ -70,8 +71,9 @@
      align-items: start;
      justify-content: start;
      gap: 10px;
-     color:var(--text-color);
+     color: var(--text-color);
 }
+
 .register__button__start>img {
      width: 26px;
 }
@@ -99,13 +101,173 @@
      text-decoration: none;
 }
 
-.register__support > a {
+.register__support>a {
      font-size: 14px;
      color: #0077cc;
      text-align: center;
-     
 }
+
 /* Убираем отступы на странице регистрации */
 .no-padding {
      padding-inline: 0;
+}
+
+/* Медиа-запросы для мобильных устройств (до 768px) */
+@media (max-width: 768px) {
+     .register__container {
+          flex-direction: column;
+          /* Вертикальное расположение */
+          height: auto;
+          /* Убираем фиксированную высоту */
+          padding: 15px;
+          /* Добавляем отступы вокруг контейнера */
+     }
+
+     .register__left {
+          flex: none;
+          /* Убираем гибкость, фиксируем размер */
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          padding: 15px;
+          /* Уменьшаем отступы */
+          text-align: center;
+          /* Центрируем текст */
+          align-items: center;
+          /* Центрируем содержимое */
+     }
+
+     .register__left h1 {
+          font-size: 28px;
+          /* Уменьшаем заголовок */
+     }
+
+     .register__left h3 {
+          font-size: 20px;
+          /* Уменьшаем подзаголовок */
+          margin-top: 8px;
+     }
+
+     .register__left p {
+          font-size: 16px;
+          /* Уменьшаем текст */
+          margin-top: 8px;
+     }
+
+     .register__right {
+          flex: none;
+          /* Убираем гибкость */
+          width: 100%;
+          /* Растягиваем на всю ширину */
+          padding: 15px;
+          /* Уменьшаем отступы */
+          justify-content: flex-start;
+          /* Выравниваем содержимое сверху */
+     }
+
+     .register__buttons {
+          max-width: 100%;
+          /* Убираем максимальную ширину, растягиваем */
+          gap: 8px;
+          /* Уменьшаем расстояние между кнопками */
+     }
+
+     .register__button {
+          height: 45px;
+          /* Уменьшаем высоту кнопки */
+          padding: 10px;
+          /* Уменьшаем внутренние отступы */
+          border-radius: 9px;
+          /* Уменьшаем радиус углов */
+          font-size: 15px;
+          /* Уменьшаем шрифт */
+     }
+
+     .register__button__start>img {
+          width: 22px;
+          /* Уменьшаем размер иконок */
+     }
+
+     .register__button svg {
+          font-size: 20px;
+          /* Уменьшаем иконки */
+          margin-right: 8px;
+     }
+
+     .register__terms {
+          font-size: 11px;
+          /* Уменьшаем текст условий */
+          margin-top: 15px;
+          padding: 0 10px;
+          /* Добавляем боковые отступы */
+     }
+
+     .register__support>a {
+          font-size: 13px;
+          /* Уменьшаем текст поддержки */
+     }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+     .register__container {
+          padding: 10px;
+          /* Еще меньше отступы вокруг контейнера */
+     }
+
+     .register__left {
+          padding: 10px;
+     }
+
+     .register__left h1 {
+          font-size: 24px;
+          /* Еще меньше заголовок */
+     }
+
+     .register__left h3 {
+          font-size: 18px;
+          margin-top: 6px;
+     }
+
+     .register__left p {
+          font-size: 14px;
+          margin-top: 6px;
+     }
+
+     .register__right {
+          padding: 10px;
+     }
+
+     .register__buttons {
+          gap: 6px;
+          /* Еще меньше расстояние между кнопками */
+     }
+
+     .register__button {
+          height: 40px;
+          /* Еще меньше высота кнопки */
+          padding: 8px;
+          border-radius: 8px;
+          font-size: 14px;
+     }
+
+     .register__button__start>img {
+          width: 20px;
+          /* Еще меньше иконки */
+     }
+
+     .register__button svg {
+          font-size: 18px;
+          margin-right: 6px;
+     }
+
+     .register__terms {
+          font-size: 10px;
+          /* Еще меньше текст условий */
+          margin-top: 12px;
+          padding: 0 8px;
+     }
+
+     .register__support>a {
+          font-size: 12px;
+     }
 }
