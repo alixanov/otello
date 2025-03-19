@@ -121,7 +121,7 @@ const Product = () => {
                                                             <p className="product__rating">{"⭐".repeat(product.star)} {product.rating}</p>
                                                             <h3 className="product__name">{product.nomi}</h3>
                                                             <p className="product__location">{product.manzil}</p>
-                                                            <p className="product__dates">Даты: {product.dates} взрослых</p>
+                                                            <p className="product__dates">Для: {product.dates} взрослых</p>
                                                             <p className="product__price">{product.narxi} $ / ночь</p>
                                                        </div>
 
